@@ -5,7 +5,7 @@
     {% if videogames %}
         <ul>
             {% for v in videogames %}
-                <li><a href="/library/{{ v.id }}">{{ v.title }}</a></li>
+                <li><a href={% url 'library:detail' v.id %}>{{ v.title }}</a></li>
             {% endfor %}
         </ul>
     {% else %}
