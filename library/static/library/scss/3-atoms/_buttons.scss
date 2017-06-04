@@ -1,0 +1,87 @@
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	background-color: $primary;
+	border: .1rem solid $primary;
+	border-radius: .4rem;
+	box-sizing: border-box;
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.2rem;
+	font-weight: 700;
+	height: 4rem;
+	letter-spacing: .1rem;
+	line-height: 4rem;
+	padding: 0 3rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	@include transition-no-touch(all $animation-speed ease);
+	white-space: nowrap;
+	@include touch-hover() {
+		background-color: $primary-hover;
+  	  	outline: 0;
+	}
+}
+
+.button.button--outline,
+button.button--outline,
+input[type="submit"].button--outline,
+input[type="reset"].button--outline,
+input[type="button"].button--outline {
+  	background-color: transparent;
+  	color: $primary;
+  	@include touch-hover() {
+		border-color: $primary-hover;
+  		color: $primary-hover;
+	}
+}
+
+.button.button--clear,
+button.button--clear,
+input[type="submit"].button--clear,
+input[type="reset"].button--clear,
+input[type="button"].button--clear {
+  	background-color: transparent;
+  	border-color: transparent;
+  	color: $primary;
+  	@include touch-hover() {
+  		background-color: transparent;
+		border-color: transparent;
+  		color: $primary-hover;
+	}
+}
+
+.button.button--secondary,
+button.button--secondary,
+input[type="submit"].button--secondary,
+input[type="reset"].button--secondary,
+input[type="button"].button--secondary {
+  	background-color: $secondary;
+  	border-color: $secondary;
+  	@include touch-hover() { background-color: $secondary-hover; }
+}
+
+.button.button--outline.button--secondary,
+button.button--outline.button--secondary,
+input[type="submit"].button--outline.button--secondary,
+input[type="reset"].button--outline.button--secondary,
+input[type="button"].button--outline.button--secondary {
+  	color: $secondary;
+  	@include touch-hover() {
+		border-color: $secondary-hover;
+  		color: $secondary-hover;
+	}
+}
+
+.button.button--clear.button--secondary,
+button.button--clear.button--secondary,
+input[type="submit"].button--clear.button--secondary,
+input[type="reset"].button--clear.button--secondary,
+input[type="button"].button--clear.button--secondary {
+  	color: $secondary;
+  	@include touch-hover() { color: $secondary-hover; }
+}

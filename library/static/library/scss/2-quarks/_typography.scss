@@ -1,0 +1,79 @@
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	color: $primary;
+	font-family: $heading-font;
+  	margin: 0 0 3rem;
+}
+
+h1, .h1 { font-size: 5.0rem; }
+h2, .h2 { font-size: 4.2rem; }
+h3, .h3 { font-size: 3.6rem; }
+h4, .h4 { font-size: 3.0rem; }
+h5, .h5 { font-size: 2.4rem; }
+h6, .h6 { font-size: 1.5rem; }
+
+p { margin: 0 0 2rem; }
+
+b, strong { font-weight: 700; }
+
+em { font-style: italic; }
+
+small, .small { font-size: 80%; }
+
+mark, .mark { background-color: $secondary; }
+
+blockquote {
+    border-left: .3rem solid $primary;
+    margin: 0 0 2rem;
+    padding: 1rem 1.5rem;
+    *:last-child { margin-bottom: 0; }
+}
+
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul { list-style: circle inside; }
+ol { list-style: decimal inside; }
+ul, ol, dl {
+	color: $text-colour;
+	line-height: 1.6;
+	margin: 0 0 2rem;
+  	padding-left: 0;
+}
+ul ul,
+ul ol,
+ul dl,
+ol ul,
+ol ol,
+ol dl,
+dl ul,
+dl ol,
+dl dl { margin: 1.5rem 0 1.5rem 3rem; }
+li, dt, dd { margin-bottom: 1rem; }
+
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+	background: #F1F1F1;
+  	border: .1rem solid #E1E1E1;
+  	border-radius: .4rem;
+  	font-size: 90%;
+  	margin: 0 .2rem;
+  	padding: .2rem .5rem;
+  	white-space: nowrap;
+}
+pre > code {
+  	display: block;
+  	padding: 1rem 1.5rem;
+  	white-space: pre;
+}
+
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+	border-top: .1rem solid #E1E1E1;
+	border-width: 0;
+  	margin: 3rem 0 3.5rem;
+}

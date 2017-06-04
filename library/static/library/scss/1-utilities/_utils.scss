@@ -1,0 +1,45 @@
+/*  Utility classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+*, :after, :before { box-sizing: border-box; }
+
+.util--float-right { float: right; }
+.util--float-left { float: left; }
+
+.util--img-responsive {
+    height: auto;
+    max-width: 100%;
+}
+
+.util--section-margin-small { margin-bottom: 2rem; }
+.util--section-margin { margin-bottom: 4rem; }
+.util--section-margin-large { margin-bottom: 6rem; }
+
+.aligncenter { margin: 0 auto; }  /* WordPress class */
+
+
+/*  Mixins
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/*
+ * Provide a hover effect for non-touch devices, turn it into an Active state for mobile, and maintain a fallback. 
+ * @requires Modernizr or another JS to add the appropriate .no-touch/.touch classes to the <body> element
+ * Adds styles via @content
+ */
+@mixin touch-hover() {
+    .no-js &:hover, // the fallback
+    .no-js &:focus,
+    .js.no-touch &:hover, // enhanced for no-touch
+    .js.no-touch &:focus,
+    .js.touch &:active { // relay same styles to active & focus for touch devices
+        @content;
+    }
+}
+
+/*
+ * Applies transition to element but removes it from the same element on touch devices.
+ * Useful for making all pseudo hover effects on mobile instant on click.
+ */
+@mixin transition-no-touch($properties) {
+    transition: $properties;
+    .js.touch & { transition: none; }
+}

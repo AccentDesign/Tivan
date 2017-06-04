@@ -1,0 +1,81 @@
+/* Grid & Breakpoints
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$grid-gutter-width-base: 30px !default;
+$grid-gutter-width: ($grid-gutter-width-base / 2) !default;
+
+$bp-xl: 1280px !default;
+$bp-lg: 1024px !default;
+$bp-md: 768px !default;
+$bp-sm: 460px !default;
+
+$bp-lg-max-width: ($bp-xl - 1) !default;
+$bp-md-max-width: ($bp-lg - 1) !default;
+$bp-sm-max-width: ($bp-md - 1) !default;
+$bp-xs-max-width: ($bp-sm - 1) !default;
+
+$bp-xl-container: 1200px !default;
+$bp-lg-container: 960px !default;
+$bp-md-container: 750px !default;
+$bp-sm-container: 100% !default;
+
+
+/* Colourscheme
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*  A nicer colour palette for the web via http://clrs.cc/  */
+/* Cool */
+$aqua: #7FDBFF;
+$blue: #0074D9;
+$navy: #001F3F;
+$teal: #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime: #01FF70;
+
+/* Warm */
+$yellow: #FFDC00;
+$orange: #FF851B;
+$red: #FF4136;
+$fuchsia: #F012BE;
+$purple: #B10DC9;
+$maroon: #85144B;
+
+/* Grayscale */
+$white: #fff;
+$silver: #ddd;
+$gray: #aaa;
+$black: #111;
+
+/* Social network colours */
+$facebook: #3b5999;
+$twitter: #55acee;
+$linkedin: #0077B5;
+$googleplus: #dd4b39;
+$instagram: #e4405f;
+$pinterest: #bd081c;
+
+/* Brand - https://coolors.co/292f36-39a2ae-2ec4b6-4e8098-90c2e7 */
+$primary: #2EC4B6;  // Maximum Blue Green
+$secondary: #4E8098;  // Cyan Azure
+
+$verdigris: #39A2AE;
+$cornflower-blue: #90C2E7;
+
+$primary-hover: #B3E9E4;
+$secondary-hover: #CEDCE2;
+
+$text-colour: #292f36;  // Gunmetal
+$grey: #EBECEC;  // Isabelline
+
+
+/* Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+$heading-font: 'Raleway', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+
+/* Miscellaneous
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$animation-speed: 500ms;
