@@ -1,5 +1,17 @@
 {% load staticfiles %}
 
 <header>
-    <img src="{% static 'library/img/tivan-logo.png' %}" alt="Tivan" class="header__logo util--img-responsive" />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2">
+                <img src="{% static 'library/img/tivan-logo.png' %}" alt="Tivan" class="header__logo util--img-responsive" />
+            </div>
+            <div class="offset-lg-6 col-lg-1">
+                <a id="add_game" class="button">Add Game</a>
+            </div>
+            <div class="offset-lg-1 col-lg-2">
+                <a id="profile" class="button">Profile</a>
+            </div>
+        </div>
+    </div>
 </header>
