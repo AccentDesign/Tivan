@@ -1381,13 +1381,10 @@ body {
   line-height: 1.375;
   position: relative; }
 
-.main {
-  background-color: #fff;
-  -webkit-box-shadow: 0px 0px 30px 0px rgba(41, 47, 54, 0.4);
-  -moz-box-shadow: 0px 0px 30px 0px rgba(41, 47, 54, 0.4);
-  box-shadow: 0px 0px 30px 0px rgba(41, 47, 54, 0.4);
-  height: 100vh;
-  padding-top: 8.5rem; }
+/* Explicitly set so that those reading the HTML can easily establish
+   the presence of a CSS grid. */
+.grid {
+  display: grid; }
 
 /*==== 2 - Quarks: defining the basic abstract HTML elements (http://zqsmm.qiniucdn.com/data/20110511083224/index.html) ====*/
 h1, h2, h3, h4, h5, h6,
@@ -1803,6 +1800,34 @@ header {
   margin-left: 2rem; }
 
 /*==== 6 - Templates: organisms combined to form pages ====*/
+.main {
+  /* Grid Settings */
+  grid-template-columns: 25rem 1fr 25rem;
+  grid-template-rows: 1fr;
+  /* Additional Styles */
+  height: 100vh;
+  padding-top: 7rem;
+  width: 100%; }
+
+.main__item {
+  padding-top: 3rem; }
+
+.sidebar--left {
+  grid-column: 1 / span 1; }
+
+.center {
+  /* Grid Settings */
+  grid-column: 2 / span 1;
+  /* Additional Styles */
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(41, 47, 54, 0.4);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(41, 47, 54, 0.4);
+  box-shadow: 0px 0px 30px 0px rgba(41, 47, 54, 0.4);
+  padding: 3rem 5rem; }
+
+.sidebar--right {
+  grid-column: 3 / span end; }
+
 /*==== 7 - Responsive: mobile device styles ====*/
 /* Site is built 'Desktop First' so all styles up to this point will cover Large Desktop (Extra Large) screen sizes */
 /* Desktop/Tablet Landscape (Large) screen sizes */

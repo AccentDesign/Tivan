@@ -28,12 +28,11 @@
 /*==== 5 - Organisms: atoms & molecules combined to form complete components/modules ====*/
 @import "5-organisms/header";
 @import "5-organisms/menu";
-@import "5-organisms/main";
 @import "5-organisms/cards";
 
 
 /*==== 6 - Templates: organisms combined to form pages ====*/
-@import "6-templates/home";
+@import "6-templates/main";
 
 
 /*==== 7 - Responsive: mobile device styles ====*/
