@@ -1,19 +1,42 @@
 {% extends 'library/base.html' %}
 
-{% block title %}
+<!--{% block title %}
 Homepage - {{ block.super }}
-{% endblock title %}
+{% endblock title %}-->
 
 {% block main_content %}
 
-    {% if videogames %}
-        <ul>
-            {% for v in videogames %}
-                <li><a href={% url 'library:detail' v.id %}>{{ v.title }}</a></li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>There are currently no videogames in he library.</p>
-    {% endif %}
+    <div class="container-fluid">
+
+        {% if videogames %}
+
+            <div class="cards">
+                <div class="row">
+
+                    {% for v in videogames %}
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <img src="http://via.placeholder.com/250x350" class="util--img-responsive" />
+                                <h4><a href={% url 'library:detail' v.id %}>{{ v.title }}</a></h4>
+                                <p>{{ v.platform }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+        {% else %}
+
+            <div class="row">
+                <div class="offset-lg-2 col-lg-8">
+                    <p>There are currently no videogames from which for you to choose.</p>
+                    <p>How about making a connection with another user?</p>
+                </div>
+            </div>
+
+        {% endif %}
+
+    </div>
 
 {% endblock %}

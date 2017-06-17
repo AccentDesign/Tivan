@@ -1786,6 +1786,10 @@ input[type="button"].button--clear.button--secondary {
     color: #CEDCE2; }
 
 /*==== 4 - Molecules: atoms combined to form micro components ====*/
+.card {
+  border: 0.1rem solid #EBECEC;
+  margin-bottom: 3rem; }
+
 /*==== 5 - Organisms: atoms & molecules combined to form complete components/modules ====*/
 header {
   background-color: #fff;
@@ -1823,7 +1827,7 @@ header {
   -webkit-box-shadow: 0px 0px 30px 0px rgba(41, 47, 54, 0.4);
   -moz-box-shadow: 0px 0px 30px 0px rgba(41, 47, 54, 0.4);
   box-shadow: 0px 0px 30px 0px rgba(41, 47, 54, 0.4);
-  padding: 3rem 5rem; }
+  padding: 3rem 1.5rem; }
 
 .sidebar--right {
   grid-column: 3 / span 1; }
