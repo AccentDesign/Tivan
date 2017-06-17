@@ -1826,7 +1826,7 @@ header {
   padding: 3rem 5rem; }
 
 .sidebar--right {
-  grid-column: 3 / span end; }
+  grid-column: 3 / span 1; }
 
 /*==== 7 - Responsive: mobile device styles ====*/
 /* Site is built 'Desktop First' so all styles up to this point will cover Large Desktop (Extra Large) screen sizes */
