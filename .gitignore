@@ -2,3 +2,5 @@
 config.codekit
 *.scssc
 *.codekit
+/config.codekit
+library/static/library/scss/.sass-cache/
