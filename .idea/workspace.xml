@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7d8f78-1f5f-4dfc-ba4e-0d6c677fb3a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/static/library/scss/6-templates/_main.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/templates/library/sidebar_left.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/templates/library/sidebar_right.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/static/library/scss/5-organisms/_main.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/static/library/scss/6-templates/_home.scss" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/templates/library/connections.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/templates/library/find_user.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/templates/library/wishlist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/static/library/scss/.sass-cache/1787ffc4bba63e97d5d9d75ed7d7fed9323193d2/style.scssc" afterPath="$PROJECT_DIR$/library/static/library/scss/.sass-cache/1787ffc4bba63e97d5d9d75ed7d7fed9323193d2/style.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/static/library/scss/.sass-cache/adb89bb1d41a0c2e325a664d98eff4fbac2d3275/_skeleton.scssc" afterPath="$PROJECT_DIR$/library/static/library/scss/.sass-cache/adb89bb1d41a0c2e325a664d98eff4fbac2d3275/_skeleton.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.codekit" afterPath="$PROJECT_DIR$/config.codekit" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/static/library/scss/1-utilities/_skeleton.scss" afterPath="$PROJECT_DIR$/library/static/library/scss/1-utilities/_skeleton.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/static/library/scss/style.scss" afterPath="$PROJECT_DIR$/library/static/library/scss/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/static/library/style.css" afterPath="$PROJECT_DIR$/library/static/library/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/templates/library/base.html" afterPath="$PROJECT_DIR$/library/templates/library/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/static/library/scss/6-templates/_main.scss" afterPath="$PROJECT_DIR$/library/static/library/scss/6-templates/_main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/templates/library/sidebar_left.html" afterPath="$PROJECT_DIR$/library/templates/library/sidebar_left.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/templates/library/sidebar_right.html" afterPath="$PROJECT_DIR$/library/templates/library/sidebar_right.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +29,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/templates/library/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="255">
+              <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -42,18 +39,38 @@
       <file leaf-file-name="sidebar_left.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/templates/library/sidebar_left.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="60">
+              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar_right.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/templates/library/sidebar_right.html">
+      <file leaf-file-name="wishlist.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/templates/library/wishlist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="45" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="45" />
+            <state relative-caret-position="75">
+              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connections.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/templates/library/connections.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="find_user.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/templates/library/find_user.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -62,18 +79,8 @@
       <file leaf-file-name="_main.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/static/library/scss/6-templates/_main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_skeleton.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/static/library/scss/1-utilities/_skeleton.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="562" column="14" lean-forward="true" selection-start-line="562" selection-start-column="14" selection-end-line="562" selection-end-column="14" />
+            <state relative-caret-position="405">
+              <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -105,11 +112,14 @@
         <option value="$PROJECT_DIR$/library/templates/library/index.html" />
         <option value="$PROJECT_DIR$/tivanapp/urls.py" />
         <option value="$PROJECT_DIR$/tivanapp/settings.py" />
-        <option value="$PROJECT_DIR$/library/templates/library/sidebar_left.html" />
-        <option value="$PROJECT_DIR$/library/templates/library/sidebar_right.html" />
         <option value="$PROJECT_DIR$/library/static/library/scss/style.scss" />
         <option value="$PROJECT_DIR$/library/templates/library/base.html" />
         <option value="$PROJECT_DIR$/library/static/library/scss/1-utilities/_skeleton.scss" />
+        <option value="$PROJECT_DIR$/library/templates/library/sidebar_left.html" />
+        <option value="$PROJECT_DIR$/library/templates/library/sidebar_right.html" />
+        <option value="$PROJECT_DIR$/library/templates/library/wishlist.html" />
+        <option value="$PROJECT_DIR$/library/templates/library/connections.html" />
+        <option value="$PROJECT_DIR$/library/templates/library/find_user.html" />
         <option value="$PROJECT_DIR$/library/static/library/scss/6-templates/_main.scss" />
       </list>
     </option>
@@ -800,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/templates/library/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/templates/library/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -840,30 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/templates/library/sidebar_right.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="45" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/templates/library/sidebar_left.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/templates/library/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/static/library/scss/1-utilities/_skeleton.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -872,10 +850,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/library/templates/library/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/templates/library/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/templates/library/sidebar_right.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/templates/library/wishlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/templates/library/sidebar_left.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/templates/library/connections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/templates/library/find_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/library/static/library/scss/6-templates/_main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="405">
+          <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
           <folding />
         </state>
       </provider>
