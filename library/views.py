@@ -9,6 +9,6 @@ def index(request):
     return render(request, 'library/index.html', {'videogames': videogames})
 
 
-def detail(request, videogame_id):
-    videogame = get_object_or_404(Videogame, pk = videogame_id)
+def detail(request, slug):
+    videogame = Videogame.objects.get(slug=slug)
     return render(request, 'library/detail.html', {'videogame': videogame})
