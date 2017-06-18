@@ -14,6 +14,7 @@ def detail(request, slug):
     videogame = Videogame.objects.get(slug=slug)
     return render(request, 'library/detail.html', {'videogame': videogame})
 
+
 def edit(request, slug):
     videogame = Videogame.objects.get(slug=slug)
     form_class = VideogameForm

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    {% include 'library/header.html' %}
+
+    <div class="grid main">
+
+        {% include 'library/sidebar_left.html' %}
+
+        <div class="main__item center">
+            {% block main_content %}
+            {% endblock %}
+        </div>
+
+        {% include 'library/sidebar_right.html' %}
+
+    </div>
+
+{% endblock %}
+

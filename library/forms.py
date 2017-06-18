@@ -7,4 +7,4 @@ from .models import Videogame
 class VideogameForm(ModelForm):
     class Meta:
         model = Videogame
-        fields = ('title', 'platform', 'cover', 'available',)
+        fields = ('title', 'cover',)

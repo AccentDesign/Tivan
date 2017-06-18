@@ -4,3 +4,4 @@ config.codekit
 *.codekit
 /config.codekit
 library/static/library/scss/.sass-cache/
+uploads/*

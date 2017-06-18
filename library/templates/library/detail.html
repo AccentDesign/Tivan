@@ -1,4 +1,4 @@
-{% extends 'library/base.html' %}
+{% extends 'library/library_base.html' %}
 
 {% block title %}
     {{ videogame.title }} - {{ block.super }}
@@ -9,4 +9,4 @@
     <h1>{{ videogame.title }}</h1>
     <a class="button" href="{% url 'library:edit' slug=videogame.slug %}">Edit</a>
 
-{% endblock %}
+{% endblock main_content %}
