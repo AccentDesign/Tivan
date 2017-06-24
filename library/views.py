@@ -8,9 +8,13 @@ from .forms import VideogameForm
 # Create your views here.
 
 
-def index(request):
-    videogames = Videogame.objects.order_by('title')[:10]
-    return render(request, 'library/index.html', {'videogames': videogames})
+def index(request, initial=None):
+    if initial:
+        videogames = Videogame.objects.filter(title__istartswith=initial).order_by('title')
+    else:
+        videogames = Videogame.objects.order_by('title')
+
+    return render(request, 'library/index.html', {'videogames': videogames, 'initial': initial})
 
 
 def detail(request, slug):
