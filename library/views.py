@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.http import Http404
 from .models import Videogame
 from .forms import VideogameForm
+
 
 # Create your views here.
 
@@ -15,8 +18,14 @@ def detail(request, slug):
     return render(request, 'library/detail.html', {'videogame': videogame})
 
 
+@login_required
 def edit(request, slug):
     videogame = Videogame.objects.get(slug=slug)
+
+    # make sure the logged in user is the owner of the thing
+    if videogame.user != request.user:
+        raise Http404
+
     form_class = VideogameForm
     # if we're coming to this view from a submitted form,
     if request.method == 'POST':
