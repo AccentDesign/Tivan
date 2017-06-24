@@ -15,24 +15,24 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from . import views
-from library.backends import MyRegistrationView
 from django.contrib.auth.views import (
     password_reset,
     password_reset_done,
     password_reset_confirm,
     password_reset_complete,
 )
-
+from . import views
+from library.backends import MyRegistrationView
 
 
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
+    url(r'^', include('registration.backends.simple.urls')),
+    url(r'^$', views.home, name="home"),
+    url(r'^contact/$', views.contact, name="contact"),
     url(r'^library/', include('library.urls', namespace="library")),
+    url(r'^register/$', MyRegistrationView.as_view(), name="registration_register"),
     url(r'^admin/', admin.site.urls),
-    url(r'^accounts/', include('registration.backends.simple.urls')),
-    url(r'^accounts/register/$', MyRegistrationView.as_view(), name='registration_register'),
-    url(r'^accounts/add-item/$', views.add_item, name='registration_add_item'),
+    url(r'^accounts/add-item/$', views.add_item, name="registration_add_item"),
     url(r'^accounts/password/reset/$', password_reset, {'template_name': 'registration/password_reset_form.html'}, name="password_reset"),
     url(r'^accounts/password/reset/done/$', password_reset_done, {'template_name': 'registration/password_reset_done.html'}, name="password_reset_done"),
     url(r'^accounts/password/reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', password_reset_confirm, {'template_name': 'registration/password_reset_confirm.html'}, name="password_reset_confirm"),

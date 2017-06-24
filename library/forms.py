@@ -1,7 +1,7 @@
 from django.forms import ModelForm
 from .models import Videogame
 
-# Create your views here.
+# Create your forms here.
 
 
 class VideogameForm(ModelForm):
