@@ -1,10 +1,10 @@
 from django.forms import ModelForm
-from .models import Videogame
+from .models import CollectionItem
 
 # Create your forms here.
 
 
-class VideogameForm(ModelForm):
+class CollectionItemForm(ModelForm):
     class Meta:
-        model = Videogame
-        fields = ('title', 'cover',)
+        model = CollectionItem
+        fields = ('item', 'format',)
