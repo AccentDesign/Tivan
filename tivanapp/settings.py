@@ -135,5 +135,15 @@ EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 
 
-LOGIN_REDIRECT_URL = "library"
+LOGIN_REDIRECT_URL = 'library'
+
+
+# the email address that the "server emails" will come from
+SERVER_EMAIL = 'app@tivan.co.uk'
+
+# the email you want these admin emails to go to # (can add as many as you like)
+ADMINS = [
+    ('Tivan Admin', 'ben@accentdesign.co.uk'),
+]
+
 
