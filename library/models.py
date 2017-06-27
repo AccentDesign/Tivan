@@ -21,15 +21,26 @@ class MediaFormat(models.Model):
 
 class MediaItem(models.Model):
     title = models.CharField(max_length=100)
-    cover = models.ImageField(upload_to='uploads/', default='uploads/placeholder-250x350.png')
     slug = models.SlugField(unique=True, default='')
 
     def __str__(self):
         return self.title
 
 
+def get_image_path(instance, filename):
+    return '/'.join(['cover-art', instance.mediaItem.slug, filename])
+
+
+class CoverArt(models.Model):
+    image = models.ImageField(upload_to=get_image_path)
+    mediaItem = models.OneToOneField(MediaItem, blank=True, null=True)
+
+
 class Collection(models.Model):
     user = models.OneToOneField(User, blank=True, null=True)
+
+    def __str__(self):
+        return self.id
 
 
 class CollectionItem(models.Model):

@@ -1,8 +1,5 @@
 from django.contrib import admin
-
-# Register your models here.
-
-from .models import MediaFormat, MediaItem, Collection, CollectionItem
+from .models import MediaFormat, MediaItem, CoverArt, Collection, CollectionItem
 
 
 # set up automated slug creation
@@ -13,8 +10,13 @@ class MediaFormatAdmin(admin.ModelAdmin):
 
 class MediaItemAdmin(admin.ModelAdmin):
     model = MediaItem
-    list_display = ('title', 'cover',)
+    list_display = ('title',)
     prepopulated_fields = {'slug': ('title',)}
+
+
+class CoverArtAdmin(admin.ModelAdmin):
+    list_display = ('mediaItem',)
+    list_display_links = ('mediaItem',)
 
 
 class CollectionAdmin(admin.ModelAdmin):
@@ -29,5 +31,6 @@ class CollectionItemAdmin(admin.ModelAdmin):
 
 admin.site.register(MediaFormat, MediaFormatAdmin)
 admin.site.register(MediaItem, MediaItemAdmin)
+admin.site.register(CoverArt, CoverArtAdmin)
 admin.site.register(Collection, CollectionAdmin)
 admin.site.register(CollectionItem, CollectionItemAdmin)
