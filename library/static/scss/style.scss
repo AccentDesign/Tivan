@@ -29,10 +29,12 @@
 @import "5-organisms/header";
 @import "5-organisms/menu";
 @import "5-organisms/cards";
+@import "5-organisms/footer";
 
 
 /*==== 6 - Templates: organisms combined to form pages ====*/
 @import "6-templates/main";
+@import "6-templates/library";
 
 
 /*==== 7 - Responsive: mobile device styles ====*/

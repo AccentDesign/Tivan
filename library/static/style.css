@@ -10,11 +10,13 @@
 /* Warm */
 /* Grayscale */
 /* Social network colours */
-/* Brand - https://coolors.co/292f36-39a2ae-2ec4b6-4e8098-90c2e7 */
+/* Brand - https://coolors.co/292f36-694873-2ec4b6-4e8098-90c2e7 */
 /* Fonts
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Athiti:300,400,500,600,700");
+@font-face {
+  font-family: 'November';
+  src: url("fonts/novem___.ttf") format("truetype"); }
 /* Miscellaneous
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -1373,9 +1375,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #EBECEC;
   color: #292f36;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Athiti", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.375;
@@ -1390,7 +1391,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #2EC4B6;
-  font-family: "Raleway", sans-serif;
+  font-family: "November", serif;
   margin: 0 0 3rem; }
 
 h1, .h1 {
@@ -1424,7 +1425,7 @@ small, .small {
   font-size: 80%; }
 
 mark, .mark {
-  background-color: #4E8098; }
+  background-color: #90C2E7; }
 
 blockquote {
   border-left: 0.3rem solid #2EC4B6;
@@ -1492,7 +1493,7 @@ a {
   .js.touch a {
     transition: none; }
   .no-js a:hover, .no-js a:focus, .js.no-touch a:hover, .js.no-touch a:focus, .js.touch a:active {
-    color: #B3E9E4;
+    color: #90C2E7;
     text-decoration: none; }
 
 input[type="email"],
@@ -1629,7 +1630,7 @@ input[type="button"] {
   input[type="button"]:hover, .js.no-touch
   input[type="button"]:focus, .js.touch
   input[type="button"]:active {
-    background-color: #B3E9E4;
+    background-color: #90C2E7;
     outline: 0; }
 
 .button.button--outline,
@@ -1660,8 +1661,8 @@ input[type="button"].button--outline {
   input[type="button"].button--outline:hover, .js.no-touch
   input[type="button"].button--outline:focus, .js.touch
   input[type="button"].button--outline:active {
-    border-color: #B3E9E4;
-    color: #B3E9E4; }
+    border-color: #90C2E7;
+    color: #90C2E7; }
 
 .button.button--clear,
 button.button--clear,
@@ -1694,15 +1695,15 @@ input[type="button"].button--clear {
   input[type="button"].button--clear:active {
     background-color: transparent;
     border-color: transparent;
-    color: #B3E9E4; }
+    color: #90C2E7; }
 
 .button.button--secondary,
 button.button--secondary,
 input[type="submit"].button--secondary,
 input[type="reset"].button--secondary,
 input[type="button"].button--secondary {
-  background-color: #4E8098;
-  border-color: #4E8098; }
+  background-color: #90C2E7;
+  border-color: #90C2E7; }
   .no-js .button.button--secondary:hover, .no-js .button.button--secondary:focus, .js.no-touch .button.button--secondary:hover, .js.no-touch .button.button--secondary:focus, .js.touch .button.button--secondary:active, .no-js
   button.button--secondary:hover, .no-js
   button.button--secondary:focus, .js.no-touch
@@ -1724,14 +1725,14 @@ input[type="button"].button--secondary {
   input[type="button"].button--secondary:hover, .js.no-touch
   input[type="button"].button--secondary:focus, .js.touch
   input[type="button"].button--secondary:active {
-    background-color: #CEDCE2; }
+    background-color: #2EC4B6; }
 
 .button.button--outline.button--secondary,
 button.button--outline.button--secondary,
 input[type="submit"].button--outline.button--secondary,
 input[type="reset"].button--outline.button--secondary,
 input[type="button"].button--outline.button--secondary {
-  color: #4E8098; }
+  color: #90C2E7; }
   .no-js .button.button--outline.button--secondary:hover, .no-js .button.button--outline.button--secondary:focus, .js.no-touch .button.button--outline.button--secondary:hover, .js.no-touch .button.button--outline.button--secondary:focus, .js.touch .button.button--outline.button--secondary:active, .no-js
   button.button--outline.button--secondary:hover, .no-js
   button.button--outline.button--secondary:focus, .js.no-touch
@@ -1753,15 +1754,15 @@ input[type="button"].button--outline.button--secondary {
   input[type="button"].button--outline.button--secondary:hover, .js.no-touch
   input[type="button"].button--outline.button--secondary:focus, .js.touch
   input[type="button"].button--outline.button--secondary:active {
-    border-color: #CEDCE2;
-    color: #CEDCE2; }
+    border-color: #2EC4B6;
+    color: #2EC4B6; }
 
 .button.button--clear.button--secondary,
 button.button--clear.button--secondary,
 input[type="submit"].button--clear.button--secondary,
 input[type="reset"].button--clear.button--secondary,
 input[type="button"].button--clear.button--secondary {
-  color: #4E8098; }
+  color: #90C2E7; }
   .no-js .button.button--clear.button--secondary:hover, .no-js .button.button--clear.button--secondary:focus, .js.no-touch .button.button--clear.button--secondary:hover, .js.no-touch .button.button--clear.button--secondary:focus, .js.touch .button.button--clear.button--secondary:active, .no-js
   button.button--clear.button--secondary:hover, .no-js
   button.button--clear.button--secondary:focus, .js.no-touch
@@ -1783,17 +1784,29 @@ input[type="button"].button--clear.button--secondary {
   input[type="button"].button--clear.button--secondary:hover, .js.no-touch
   input[type="button"].button--clear.button--secondary:focus, .js.touch
   input[type="button"].button--clear.button--secondary:active {
-    color: #CEDCE2; }
+    color: #2EC4B6; }
 
 /*==== 4 - Molecules: atoms combined to form micro components ====*/
 .card {
-  border: 0.1rem solid #EBECEC;
+  border: 0.1rem solid #292f36;
   margin-bottom: 3rem; }
 
 /*==== 5 - Organisms: atoms & molecules combined to form complete components/modules ====*/
-header {
+.header {
+  border-bottom: 0.1rem solid #2EC4B6; }
+
+.header--main {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem; }
+  .header--main a {
+    color: rgba(41, 47, 54, 0.54);
+    font-family: "November", serif;
+    font-size: 2rem;
+    line-height: 1;
+    text-transform: lowercase; }
+
+.header--library {
   background-color: #fff;
-  border-bottom: 0.1rem solid #2EC4B6;
   padding: 1.5rem 0;
   position: absolute;
   width: 100%;
@@ -1803,17 +1816,41 @@ header {
   height: 4rem;
   margin-left: 2rem; }
 
+.footer {
+  border-bottom: 0.1rem solid #2EC4B6;
+  bottom: 4rem;
+  position: absolute;
+  width: calc(100% - 12rem); }
+
 /*==== 6 - Templates: organisms combined to form pages ====*/
-.main {
+.main .half {
+  height: 100vh;
+  padding: 4rem 6rem 0; }
+
+.half--left {
+  margin-left: -1.5rem;
+  padding-left: 6rem; }
+  .half--left .h1 a {
+    color: #fff; }
+
+.half--right {
+  margin-right: -1.5rem;
+  position: relative; }
+
+.pixel-art {
+  background: url("img/pixel-art.jpg") right -8.5rem; }
+
+.library {
   /* Grid Settings */
   grid-template-columns: 25rem 1fr 25rem;
   grid-template-rows: 1fr;
   /* Additional Styles */
+  background-color: #EBECEC;
   height: 100vh;
   padding-top: 7rem;
   width: 100%; }
 
-.main__item {
+.library__item {
   padding-top: 3rem; }
 
 .sidebar--left {

@@ -4,7 +4,7 @@ a {
   	text-decoration: none;
   	@include transition-no-touch(color $animation-speed ease);
   	@include touch-hover() {
-  		color: $primary-hover;
+  		color: $secondary;
   		text-decoration: none;
   	}
 }

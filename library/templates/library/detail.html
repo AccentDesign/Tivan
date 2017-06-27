@@ -4,7 +4,7 @@
     {{ videogame.title }} - {{ block.super }}
 {% endblock title %}
 
-{% block main_content %}
+{% block library_content %}
 
     <h1>{{ videogame.title }}</h1>
 
@@ -12,4 +12,4 @@
         <a class="button" href="{% url 'library:edit' slug=videogame.slug %}">Edit</a>
     {% endif %}
 
-{% endblock main_content %}
+{% endblock library_content %}

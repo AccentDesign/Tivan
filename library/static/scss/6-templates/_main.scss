@@ -1,28 +1,17 @@
-.main {
-    /* Grid Settings */
-    grid-template-columns: 25rem 1fr 25rem;
-    grid-template-rows: 1fr;
-
-    /* Additional Styles */
+.main .half {
     height: 100vh;
-    padding-top: 7rem;
-    width: 100%
+    padding: 4rem 6rem 0;
 }
 
-.main__item { padding-top: 3rem; }
-
-.sidebar--left { grid-column: 1 / span 1; }
-
-.center {
-    /* Grid Settings */
-    grid-column: 2 / span 1;
-
-    /* Additional Styles */
-    background-color: $white;
-    -webkit-box-shadow: 0px 0px 30px 0px rgba(41,47,54,0.4);
-       -moz-box-shadow: 0px 0px 30px 0px rgba(41,47,54,0.4);
-            box-shadow: 0px 0px 30px 0px rgba(41,47,54,0.4);
-    padding: 3rem 1.5rem;
+.half--left {
+    margin-left: -1.5rem;
+    padding-left: 6rem;
+    .h1 a { color: $white; }
 }
 
-.sidebar--right { grid-column: 3 / span 1; }
+.half--right {
+    margin-right: -1.5rem;
+    position: relative;
+}
+
+.pixel-art { background: url('img/pixel-art.jpg') right -8.5rem; }

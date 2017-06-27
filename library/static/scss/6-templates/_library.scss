@@ -1,0 +1,29 @@
+.library {
+    /* Grid Settings */
+    grid-template-columns: 25rem 1fr 25rem;
+    grid-template-rows: 1fr;
+
+    /* Additional Styles */
+    background-color: $grey;
+    height: 100vh;
+    padding-top: 7rem;
+    width: 100%
+}
+
+.library__item { padding-top: 3rem; }
+
+.sidebar--left { grid-column: 1 / span 1; }
+
+.center {
+    /* Grid Settings */
+    grid-column: 2 / span 1;
+
+    /* Additional Styles */
+    background-color: $white;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(41,47,54,0.4);
+       -moz-box-shadow: 0px 0px 30px 0px rgba(41,47,54,0.4);
+            box-shadow: 0px 0px 30px 0px rgba(41,47,54,0.4);
+    padding: 3rem 1.5rem;
+}
+
+.sidebar--right { grid-column: 3 / span 1; }

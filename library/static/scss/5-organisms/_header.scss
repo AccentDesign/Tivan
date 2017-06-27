@@ -1,6 +1,19 @@
-header {
+.header { border-bottom: .1rem solid $primary; }
+
+.header--main {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    a {
+        color: $text-colour-54;
+        font-family: $heading-font;
+        font-size: 2rem;
+        line-height: 1;
+        text-transform: lowercase;
+    }
+}
+
+.header--library {
     background-color: $white;
-    border-bottom: .1rem solid $primary;
     padding: 1.5rem 0;
     position: absolute;
     width: 100%;

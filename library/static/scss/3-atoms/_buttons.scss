@@ -22,7 +22,7 @@ input[type="button"] {
 	@include transition-no-touch(all $animation-speed ease);
 	white-space: nowrap;
 	@include touch-hover() {
-		background-color: $primary-hover;
+		background-color: $secondary;
   	  	outline: 0;
 	}
 }
@@ -35,8 +35,8 @@ input[type="button"].button--outline {
   	background-color: transparent;
   	color: $primary;
   	@include touch-hover() {
-		border-color: $primary-hover;
-  		color: $primary-hover;
+		border-color: $secondary;
+  		color: $secondary;
 	}
 }
 
@@ -51,7 +51,7 @@ input[type="button"].button--clear {
   	@include touch-hover() {
   		background-color: transparent;
 		border-color: transparent;
-  		color: $primary-hover;
+  		color: $secondary;
 	}
 }
 
@@ -62,7 +62,7 @@ input[type="reset"].button--secondary,
 input[type="button"].button--secondary {
   	background-color: $secondary;
   	border-color: $secondary;
-  	@include touch-hover() { background-color: $secondary-hover; }
+  	@include touch-hover() { background-color: $primary; }
 }
 
 .button.button--outline.button--secondary,
@@ -72,8 +72,8 @@ input[type="reset"].button--outline.button--secondary,
 input[type="button"].button--outline.button--secondary {
   	color: $secondary;
   	@include touch-hover() {
-		border-color: $secondary-hover;
-  		color: $secondary-hover;
+		border-color: $primary;
+  		color: $primary;
 	}
 }
 
@@ -83,5 +83,5 @@ input[type="submit"].button--clear.button--secondary,
 input[type="reset"].button--clear.button--secondary,
 input[type="button"].button--clear.button--secondary {
   	color: $secondary;
-  	@include touch-hover() { color: $secondary-hover; }
+  	@include touch-hover() { color: $primary; }
 }

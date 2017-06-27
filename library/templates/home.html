@@ -1,13 +1,13 @@
-{% extends 'base.html' %}
+{% extends 'main_base.html' %}
 
 {% block title %}
     {{ block.super }}
 {% endblock title %}
 
-{% block body %}
+{% block main_content %}
 
-    <h1>Welcome to Tivan</h1>
+    <h1>Home</h1>
 
-    <a class="button" href={% url 'library:index' %}>View Library</a>
+    <a class="button" href="{% url 'library:index' %}">View Library</a>
 
-{% endblock body %}
+{% endblock main_content %}
