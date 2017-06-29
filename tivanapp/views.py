@@ -1,15 +1,19 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.forms import AuthenticationForm
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
 from django.template import Context
+from registration.forms import RegistrationForm
 from .forms import ContactForm
 
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'home.html')
+    reg_form_class = RegistrationForm
+    auth_form_class = AuthenticationForm
+    return render(request, 'home.html', {'reg_form': reg_form_class, 'auth_form': auth_form_class,})
 
 
 def contact(request):

@@ -1,10 +1,10 @@
 from django.forms import ModelForm
-from .models import CollectionItem
+from .models import MediaItem
 
 # Create your forms here.
 
 
-class CollectionItemForm(ModelForm):
+class MediaItemForm(ModelForm):
     class Meta:
-        model = CollectionItem
-        fields = ('item', 'format',)
+        model = MediaItem
+        fields = ('title', 'platform', 'coverArt', 'available', 'user')

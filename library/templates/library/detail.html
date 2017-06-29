@@ -1,15 +1,15 @@
 {% extends 'library/library_base.html' %}
 
 {% block title %}
-    {{ videogame.title }} - {{ block.super }}
+    {{ item.title }} - {{ block.super }}
 {% endblock title %}
 
 {% block library_content %}
 
-    <h1>{{ videogame.title }}</h1>
+    <h1>{{ item.title }}</h1>
 
-    {% if user == videogame.user %}
-        <a class="button" href="{% url 'library:edit' slug=videogame.slug %}">Edit</a>
+    {% if user == item.user %}
+        <a class="button" href="{% url 'library:edit' slug=item.slug %}">Edit</a>
     {% endif %}
 
 {% endblock library_content %}

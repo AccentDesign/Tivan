@@ -1,12 +1,12 @@
 {% extends 'library/library_base.html' %}
 
 {% block title %}
-    Edit {{ videogame.title }} - {{ block.super }}
+    Edit {{ item.title }} - {{ block.super }}
 {% endblock title %}
 
 {% block library_content %}
 
-    <h1>Edit {{ videogame.title }}</h1>
+    <h1>Edit {{ item.title }}</h1>
 
     <form role="form" action="" method="post">
         {% csrf_token %}

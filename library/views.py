@@ -2,36 +2,35 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
-from .models import CollectionItem
-from .forms import CollectionItemForm
-
+from .models import MediaItem
+from .forms import MediaItemForm
 
 # Create your views here.
 
 
 def index(request, initial=None):
     if initial:
-        items = CollectionItem.objects.filter(title__istartswith=initial).order_by('title')
+        items = MediaItem.objects.filter(title__istartswith=initial).order_by('title')
     else:
-        items = CollectionItem.objects.order_by('id')
+        items = MediaItem.objects.order_by('title')
 
     return render(request, 'library/index.html', {'items': items, 'initial': initial})
 
 
-def detail(request, id):
-    item = CollectionItem.objects.get(id=id)
+def detail(request, slug):
+    item = MediaItem.objects.get(slug=slug)
     return render(request, 'library/detail.html', {'item': item})
 
 
 @login_required
-def edit(request, id):
-    item = CollectionItem.objects.get(id=id)
+def edit(request, slug):
+    item = MediaItem.objects.get(slug=slug)
 
     # make sure the logged in user is the owner of the thing
     if item.user != request.user:
         raise Http404
 
-    form_class = CollectionItemForm
+    form_class = MediaItemForm
     # if we're coming to this view from a submitted form,
     if request.method == 'POST':
         # grab the data from the submitted form
@@ -41,7 +40,7 @@ def edit(request, id):
             form.save()
 
             messages.success(request, 'Item Updated.')
-            return redirect('library:detail', id=item.id)
+            return redirect('library:detail', slug=item.slug)
     # otherwise just create the form
     else:
         form = form_class(instance=item)
@@ -51,7 +50,7 @@ def edit(request, id):
 
 @login_required
 def add(request):
-    form_class = CollectionItemForm
+    form_class = MediaItemForm
     # if we're coming from a submitted form, do this if request.method == 'POST':
     # grab the data from the submitted form and apply to # the form
     if request.method == 'POST':
@@ -66,9 +65,9 @@ def add(request):
 
             messages.success(request, 'Item Added.')
             # redirect to our newly created thing
-            return redirect('library:detail', id=item.id)
+            return redirect('library:detail', slug=item.slug)
     # otherwise just create the form
     else:
         form = form_class()
-        return render(request, 'library/create.html', {'form': form})
+        return render(request, 'library/add.html', {'form': form})
 

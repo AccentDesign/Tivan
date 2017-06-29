@@ -1,17 +1,17 @@
 {% extends 'library/library_base.html' %}
 
 {% block title %}
-    Create - {{ block.super }}
+    Add Item - {{ block.super }}
 {% endblock title %}
 
 {% block library_content %}
 
-    <h1>Create</h1>
+    <h1>Add Item</h1>
 
     <form role="form" action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Submit" />
+        <button type="submit">Add</button>
     </form>
 
 {% endblock library_content %}

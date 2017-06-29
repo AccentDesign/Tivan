@@ -12,17 +12,17 @@
             <a href="{% url 'library:index_by_letter' initial=letter %}" {% if initial == letter %}class="active"{% endif %}>{{ letter|upper }}</a>
         {% endfor %}
 
-        {% if videogames %}
+        {% if items %}
 
             <div class="cards">
                 <div class="row">
 
-                    {% for v in videogames %}
+                    {% for i in items %}
                         <div class="col-lg-3">
                             <div class="card">
                                 <img src="http://via.placeholder.com/250x350" class="util--img-responsive" />
-                                <h4><a href="{% url 'library:detail' v.slug %}">{{ v.title }}</a></h4>
-                                <p>{{ v.platform }}</p>
+                                <h4><a href="{% url 'library:detail' i.slug %}">{{ i.title }}</a></h4>
+                                <p>{{ i.platform }}</p>
                             </div>
                         </div>
                     {% endfor %}

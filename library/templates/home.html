@@ -8,6 +8,26 @@
 
     <h1>Home</h1>
 
+    <a class="toggle toggle--form active" data-target="register">Register</a>
+    <a class="toggle toggle--form" data-target="login">Login</a>
+
+    <div id="register" class="form-wrapper active">
+        <form role="form" action="" method="post">
+            {% csrf_token %}
+            {{ reg_form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div id="login" class="form-wrapper">
+        <form role="form" action="" method="post">
+            {% csrf_token %}
+            {{ auth_form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+        <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
+    </div>
+
     <a class="button" href="{% url 'library:index' %}">View Library</a>
 
 {% endblock main_content %}
