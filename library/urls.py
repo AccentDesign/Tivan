@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^(?P<slug>[-\w]+)/$', views.detail, name="detail"),
     url(r'^(?P<slug>[-\w]+)/edit/$', views.edit, name="edit"),
     url(r'^add/$', views.add, name="add"),
+    url(r'^profile/edit/', views.edit_profile, name='edit_profile'),
 ]

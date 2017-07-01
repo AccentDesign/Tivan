@@ -1,0 +1,17 @@
+{% extends 'library/library_base.html' %}
+
+{% block title %}
+    Edit {{ item.title }} - {{ block.super }}
+{% endblock title %}
+
+{% block library_content %}
+
+    <h1>Edit {{ item.title }}</h1>
+
+    <form role="form" action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+
+{% endblock library_content %}

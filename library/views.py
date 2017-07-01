@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from .models import MediaItem
-from .forms import MediaItemForm
+from .forms import MediaItemForm, EditUserForm
 
 # Create your views here.
 
@@ -70,4 +70,19 @@ def add(request):
     else:
         form = form_class()
         return render(request, 'library/add.html', {'form': form})
+
+
+@login_required
+def edit_profile(request):
+    user = request.user
+    form_class = EditUserForm
+    if request.method == 'POST':
+        form = form_class(data=request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'User profile updated.')
+            return redirect('index')
+    else:
+        form = form_class(instance=user)
+        return render(request, 'library/edit_profile.html', {'user': user, 'form': form})
 

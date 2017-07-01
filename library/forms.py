@@ -1,4 +1,5 @@
 from django.forms import ModelForm
+from django.contrib.auth.models import User
 from .models import MediaItem
 
 # Create your forms here.
@@ -7,4 +8,10 @@ from .models import MediaItem
 class MediaItemForm(ModelForm):
     class Meta:
         model = MediaItem
-        fields = ('title', 'platform', 'coverArt', 'available', 'user')
+        fields = ('title', 'platform', 'coverArt', 'available', 'user',)
+
+
+class EditUserForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'email', 'is_active',)
