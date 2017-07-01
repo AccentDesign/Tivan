@@ -12,8 +12,11 @@ select {
   	border-radius: .4rem;
   	box-shadow: none;
   	box-sizing: border-box;
-  	height: 3.8rem;
+  	color: $text-colour-87;
+  	font-family: $body-font;
+  	height: 3.5rem;
   	padding: .6rem 1rem; /* The .6rem vertically centers text on FF, ignored by Webkit */
+  	width: 28rem;
 }
 
 /* Removes awkward default styles on some inputs for iOS */
@@ -31,8 +34,8 @@ textarea {
 }
 
 textarea {
-  	min-height: 6.5rem;
-  	padding: .6rem 0;
+    line-height: 1.3;
+  	min-height: 16rem;
 }
 
 input[type="email"]:focus,
@@ -51,6 +54,7 @@ select:focus {
 label,
 legend {
   	display: block;
+  	font-size: 1.4rem;
   	font-weight: 700;
   	margin-bottom: .5rem;
 }
@@ -67,4 +71,12 @@ label > .label-body {
   display: inline-block;
   font-weight: normal;
   margin-left: .5rem;
+}
+
+.helptext {
+    color: $text-colour-54;
+    display: block;
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-top: .5rem
 }
