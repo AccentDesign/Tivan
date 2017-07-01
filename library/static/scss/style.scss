@@ -21,6 +21,7 @@
 
 
 /*==== 4 - Molecules: atoms combined to form micro components ====*/
+@import "4-molecules/dialog";
 @import "4-molecules/search";
 @import "4-molecules/card";
 
@@ -28,6 +29,7 @@
 /*==== 5 - Organisms: atoms & molecules combined to form complete components/modules ====*/
 @import "5-organisms/header";
 @import "5-organisms/menu";
+@import "5-organisms/messages";
 @import "5-organisms/cards";
 @import "5-organisms/footer";
 

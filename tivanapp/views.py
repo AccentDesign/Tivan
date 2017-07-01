@@ -34,8 +34,8 @@ def contact(request):
             email = EmailMessage(
                 'New contact form submission',
                 content,
-                'Your website <hi@weddinglovely.com>',
-                ['youremail@gmail.com'],
+                'Contact from Tivan',
+                ['ben@accentdesign.co.uk'],
                 headers={'Reply-To': contact_email}
             )
             email.send()
