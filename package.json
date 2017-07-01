@@ -1,0 +1,29 @@
+{
+  "name": "tivan",
+  "version": "1.0.0",
+  "description": "A Python/Django web app for managing a library of users videogame collections",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benaccent/Tivan.git"
+  },
+  "author": "Ben Hall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benaccent/Tivan/issues"
+  },
+  "homepage": "https://github.com/benaccent/Tivan#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+  }
+}
