@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+    // Hide Messages
+    window.setTimeout( hideMessages, 5000);
+
+    function hideMessages(){
+        $('.messages').slideUp();
+    }
+
     // Touch Device Detector
     if ("ontouchstart" in window || navigator.maxTouchPoints) {
         $('body').addClass('touch');

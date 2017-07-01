@@ -2,8 +2,9 @@
     bottom: 0;
     list-style: none;
     position: fixed;
+    right: 0;
     margin: 0 1rem;
-    width: calc(100% - 2rem);
+    width: calc(50% - 2rem);
     li {
         border: .2rem solid $white;
         border-radius: 1rem;
