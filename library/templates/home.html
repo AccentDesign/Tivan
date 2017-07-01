@@ -6,10 +6,10 @@
 
 {% block main_content %}
 
-    <h1>Home</h1>
+    <p>So, what's it gonna be?</p>
 
-    <a class="toggle toggle--form active" data-target="register">Register</a>
-    <a class="toggle toggle--form" data-target="login">Login</a>
+    <a class="button button--toggle--left toggle--form active" data-target="register">Register</a>
+    <a class="button button--toggle--right toggle--form" data-target="login">Login</a>
 
     <div id="register" class="form-wrapper active">
         <form role="form" action="" method="post">
@@ -25,7 +25,6 @@
             {{ auth_form.as_p }}
             <button type="submit">Login</button>
         </form>
-        <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
     </div>
 
     <a class="button" href="{% url 'library:index' %}">View Library</a>
