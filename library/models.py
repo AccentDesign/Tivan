@@ -26,3 +26,14 @@ class MediaItem(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Connection(models.Model):
+    users = models.ManyToManyField(User, blank=True)
+    active = models.BooleanField(default=0)
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    connections = models.ManyToManyField(Connection, blank=True)
+
