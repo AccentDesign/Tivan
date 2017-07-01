@@ -5,3 +5,5 @@ config.codekit
 /config.codekit
 library/static/scss/.sass-cache/
 media/*
+node_modules/
+env/
