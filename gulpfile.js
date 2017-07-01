@@ -38,9 +38,12 @@ gulp.task('post-css', function () {
         .pipe(gulp.dest('library/static'))
 });
 
+// Complete CSS processing
+gulp.task('css-process', ['sass', 'post-css']);
+
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('library/static/scss/*.scss', ['sass']);
+    gulp.watch('library/static/scss/*.scss', ['css-process']);
     gulp.watch('library/static/js/*.js', ['scripts']);
 });
 
