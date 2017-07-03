@@ -1,3 +1,9 @@
 <div class="find_user">
     <h3>Find a User</h3>
+
+    <form role="form" action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
 </div>

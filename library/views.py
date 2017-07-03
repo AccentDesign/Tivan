@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import Http404
 from .models import MediaItem
-from .forms import MediaItemForm, EditUserForm
+from .forms import MediaItemForm, EditUserForm, UserSearchForm
 
 # Create your views here.
 
@@ -14,7 +15,14 @@ def index(request, initial=None):
     else:
         items = MediaItem.objects.order_by('title')
 
-    return render(request, 'library/index.html', {'items': items, 'initial': initial})
+    users = User.objects.order_by('username')
+    form_class = UserSearchForm
+    return render(request, 'library/index.html', {
+        'items': items,
+        'initial': initial,
+        'users': users,
+        'form': form_class
+    })
 
 
 def detail(request, slug):

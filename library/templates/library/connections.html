@@ -1,6 +1,13 @@
 <div class="connections">
     <h3>Connections</h3>
-    <ul>
-        <li></li>
-    </ul>
+
+     {% if users %}
+        <ul>
+            {% for u in users %}
+                {% if u.username != 'admin' %}
+                    <li>{{ u.username }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
 </div>
