@@ -1,4 +1,13 @@
 .card {
-    border: .1rem solid $text-colour;
+    border: .1rem solid $text-colour-12;
     margin-bottom: 3rem;
+}
+
+.card__text {
+    padding: 1rem 1.5rem;
+    h5 { margin-bottom: 0; }
+    p {
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
 }

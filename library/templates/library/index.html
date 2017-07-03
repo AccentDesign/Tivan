@@ -8,15 +8,16 @@
 
     <div class="container-fluid">
 
-        {% for letter in 'abcdefghijklmnopqrstuvwxyz' %}
-            <a href="{% url 'library:index_by_letter' initial=letter %}" {% if initial == letter %}class="active"{% endif %}>{{ letter|upper }}</a>
-        {% endfor %}
+        <div class="search--title">
+            <span>Search by Title</span>
+            {% for letter in 'abcdefghijklmnopqrstuvwxyz' %}
+                <a href="{% url 'library:index_by_letter' initial=letter %}" {% if initial == letter %}class="active"{% endif %}>{{ letter|upper }}</a>
+            {% endfor %}
+        </div>
 
         {% if items %}
-
             <div class="cards">
                 <div class="row">
-
                     {% for i in items %}
                         <div class="col-lg-3">
                             <div class="card">
@@ -25,24 +26,22 @@
                                 {% else %}
                                     <img src="http://via.placeholder.com/250x350" class="util--img-responsive" alt="{{ i.title }}" />
                                 {% endif %}
-                                <h4><a href="{% url 'library:detail' i.slug %}">{{ i.title }}</a></h4>
-                                <p>{{ i.platform }}</p>
+                                <div class="card__text">
+                                    <h5><a href="{% url 'library:detail' i.slug %}">{{ i.title }}</a></h5>
+                                    <p>{{ i.platform }}</p>
+                                </div>
                             </div>
                         </div>
                     {% endfor %}
-
                 </div>
             </div>
-
         {% else %}
-
             <div class="row">
                 <div class="offset-lg-2 col-lg-8">
                     <p>There are currently no videogames from which for you to choose.</p>
                     <p>How about making a connection with another user?</p>
                 </div>
             </div>
-
         {% endif %}
 
     </div>

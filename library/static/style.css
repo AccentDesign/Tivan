@@ -1195,19 +1195,19 @@ h1, .h1 {
   font-size: 5.0rem; }
 
 h2, .h2 {
-  font-size: 4.2rem; }
+  font-size: 3.2rem; }
 
 h3, .h3 {
-  font-size: 3.6rem; }
+  font-size: 2.8rem; }
 
 h4, .h4 {
-  font-size: 3.0rem; }
+  font-size: 2.1rem; }
 
 h5, .h5 {
-  font-size: 2.4rem; }
+  font-size: 1.8rem; }
 
 h6, .h6 {
-  font-size: 1.5rem; }
+  font-size: 1.6rem; }
 
 p {
   margin: 0 0 2rem; }
@@ -1768,9 +1768,23 @@ input[type="button"].button--clear.button--secondary {
     .dialog p:last-child {
       margin-bottom: 0; }
 
+.search--title {
+  margin-bottom: 2rem; }
+  .search--title span {
+    font-weight: 700;
+    margin-right: 3rem; }
+
 .card {
-  border: 0.1rem solid #292f36;
+  border: 0.1rem solid rgba(41, 47, 54, 0.12);
   margin-bottom: 3rem; }
+
+.card__text {
+  padding: 1rem 1.5rem; }
+  .card__text h5 {
+    margin-bottom: 0; }
+  .card__text p {
+    font-size: 1.4rem;
+    margin-bottom: 0; }
 
 /*==== 5 - Organisms: atoms & molecules combined to form complete components/modules ====*/
 .header {
@@ -1801,6 +1815,35 @@ input[type="button"].button--clear.button--secondary {
 .header__logo {
   height: 4rem;
   margin-left: 2rem; }
+
+.section {
+  border-bottom: 0.3rem solid rgba(41, 47, 54, 0.12);
+  margin-bottom: 4rem;
+  padding: 0 1.5rem; }
+
+.section__title {
+  background-color: rgba(41, 47, 54, 0.12);
+  font-size: 1.8rem;
+  margin: 0 -1.5rem 2rem;
+  padding: 1rem 1.5rem; }
+
+.section--connections .section__title {
+  margin-bottom: 0; }
+
+.section--connections ul {
+  list-style: none; }
+
+.section--connections li {
+  border-bottom: 0.1rem solid rgba(41, 47, 54, 0.12);
+  margin-bottom: 0;
+  padding: 1rem 0; }
+  .section--connections li:last-child {
+    border-bottom: 0; }
+
+.section--find_user {
+  padding-bottom: 2rem; }
+  .section--find_user input[type="text"] {
+    width: 100%; }
 
 .messages {
   bottom: 0;
