@@ -14,8 +14,8 @@ class Platform(models.Model):
         return self.name
 
 
-def get_image_path(filename):
-    return '/'.join(['cover-art', filename])
+def get_image_path(instance, filename):
+    return '/'.join(['cover-art', instance.slug, filename])
 
 
 class MediaItem(models.Model):
@@ -24,7 +24,7 @@ class MediaItem(models.Model):
     coverArt = models.ImageField(upload_to=get_image_path, default='')
     available = models.BooleanField(default=1)
     slug = models.SlugField(unique=True, default='')
-    user = models.OneToOneField(User, blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default='')
 
     def __str__(self):
         return self.title

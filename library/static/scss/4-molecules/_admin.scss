@@ -1,0 +1,15 @@
+.admin-bar {
+    background-color: #f694c2;
+    border: .1rem solid $white;
+    border-radius: 0 0 .5rem .5rem;
+    display: inline;
+    left: 4rem;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    top: -.1rem;
+    z-index: 10;
+    a {
+        color: $white;
+        font-weight: 700;
+    }
+}

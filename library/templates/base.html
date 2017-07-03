@@ -17,6 +17,13 @@
 </head>
 <body class="js">
 
+{% if user.is_superuser %}
+    <div class="admin-bar">
+        <span>Admin Logged In</span>
+        <a href="/admin/">View Backend</a>
+    </div>
+{% endif %}
+
 {% block body %}
 {% endblock %}
 
