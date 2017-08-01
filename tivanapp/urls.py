@@ -30,6 +30,7 @@ from library.backends import MyRegistrationView
 urlpatterns = [
     url(r'^', include('registration.backends.simple.urls')),
     url(r'^$', views.home, name="home"),
+    url(r'^how-it-works/$', views.how_it_works, name="how_it_works"),
     url(r'^contact/$', views.contact, name="contact"),
     url(r'^library/', include('library.urls', namespace="library")),
     url(r'^register/$', MyRegistrationView.as_view(), name="registration_register"),
