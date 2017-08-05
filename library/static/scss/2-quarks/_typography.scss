@@ -75,7 +75,13 @@ pre > code {
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-	border-top: .1rem solid #E1E1E1;
-	border-width: 0;
+	border-top: .1rem solid $primary;
   	margin: 3rem 0 3.5rem;
+}
+
+.line {
+    background-color: $primary;
+    height: .1rem;
+    margin-top: 2.5rem;
+    width: 100%;
 }
