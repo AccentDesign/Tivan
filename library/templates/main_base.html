@@ -2,31 +2,15 @@
 
 {% block body %}
 
+{% include 'main_header.html' %}
+
     <div class="main">
-        <div class="container-fluid">
-            <div class="row no-gutters">
-                <div class="col-6">
-                    <div class="half half--left pixel-art">
-                        <h2 class="h1"><a href="{% url 'library:index' %}">Tivan</a></h2>
-                        <div class="dialog">
-                            <p>Catalogue your games...<br>Connect with your friends...<br>Browse...Loan...Repeat...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="half half--right">
 
-                        {% include 'main_header.html' %}
+        {% block main_content %}
+        {% endblock main_content %}
 
-                        {% block main_content %}
-                        {% endblock main_content %}
-
-                        {% include 'main_footer.html' %}
-
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+
+{% include 'main_footer.html' %}
 
 {% endblock body %}

@@ -1,25 +1,3 @@
-.main .half {
-    height: 100vh;
-    padding: 4rem 6rem 0;
-}
-
-.half--left {
-    margin-left: -1.5rem;
-    padding-left: 6rem;
-    .h1 a { color: $white; }
-    .dialog {
-        width: 30rem;
-        margin: 8.5rem auto 0;
-    }
-}
-
-.half--right {
-    margin-right: -1.5rem;
-    position: relative;
-}
-
-.pixel-art { background: url('img/pixel-art.jpg') right -8.5rem; }
-
 .form-wrapper {
     display: none;
     margin-top: 2rem;
