@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7d8f78-1f5f-4dfc-ba4e-0d6c677fb3a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/static/scss/2-quarks/_typography.scss" afterPath="$PROJECT_DIR$/library/static/scss/2-quarks/_typography.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/static/scss/5-organisms/_header.scss" afterPath="$PROJECT_DIR$/library/static/scss/5-organisms/_header.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/static/scss/5-organisms/_footer.scss" afterPath="$PROJECT_DIR$/library/static/scss/5-organisms/_footer.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/static/style.css" afterPath="$PROJECT_DIR$/library/static/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/static/style.min.css" afterPath="$PROJECT_DIR$/library/static/style.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/templates/main_header.html" afterPath="$PROJECT_DIR$/library/templates/main_header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/templates/main_footer.html" afterPath="$PROJECT_DIR$/library/templates/main_footer.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,21 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/library/static/scss/5-organisms/_header.scss">
+      <file leaf-file-name="_footer.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/library/static/scss/5-organisms/_footer.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_typography.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/static/scss/2-quarks/_typography.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="76" column="4" lean-forward="true" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+            <state relative-caret-position="15">
+              <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -110,7 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/library/static/scss/5-organisms/_footer.scss" />
         <option value="$PROJECT_DIR$/library/templates/library/sidebar_left.html" />
         <option value="$PROJECT_DIR$/library/templates/library/sidebar_right.html" />
         <option value="$PROJECT_DIR$/library/static/scss/6-templates/_library.scss" />
@@ -157,10 +144,11 @@
         <option value="$PROJECT_DIR$/library/templates/main_base.html" />
         <option value="$PROJECT_DIR$/library/static/img/tivan.svg" />
         <option value="$PROJECT_DIR$/tivanapp/urls.py" />
-        <option value="$PROJECT_DIR$/library/templates/main_footer.html" />
         <option value="$PROJECT_DIR$/library/templates/main_header.html" />
         <option value="$PROJECT_DIR$/library/static/scss/2-quarks/_typography.scss" />
         <option value="$PROJECT_DIR$/library/static/scss/5-organisms/_header.scss" />
+        <option value="$PROJECT_DIR$/library/templates/main_footer.html" />
+        <option value="$PROJECT_DIR$/library/static/scss/5-organisms/_footer.scss" />
       </list>
     </option>
   </component>
@@ -373,6 +361,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1-utilities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tivan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tivan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -550,13 +564,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/templates/library/edit_profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -678,13 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/static/scss/1-utilities/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -889,10 +889,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/templates/main_footer.html">
+    <entry file="file://$PROJECT_DIR$/library/static/scss/5-organisms/_header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="525">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -905,10 +905,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/static/scss/5-organisms/_header.scss">
+    <entry file="file://$PROJECT_DIR$/library/templates/main_footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="150">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/static/scss/1-utilities/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/static/scss/5-organisms/_footer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
           <folding />
         </state>
       </provider>
