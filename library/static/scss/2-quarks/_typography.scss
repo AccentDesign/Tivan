@@ -24,6 +24,15 @@ mark, .mark { background-color: $secondary; }
 
 .pixelate { font-family: $heading-font; }
 
+.align--left { text-align: left; }
+.align--center { text-align: center; }
+.align--right { text-align: right; }
+
+.align--center--block {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 blockquote {
     border-left: .3rem solid $primary;
     margin: 0 0 2rem;

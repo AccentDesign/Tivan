@@ -11,14 +11,13 @@ input[type="button"] {
 	display: inline-block;
 	font-family: $heading-font;
 	font-size: 1.2rem;
-	font-weight: 700;
 	height: 3.5rem;
 	letter-spacing: .1rem;
 	line-height: 3.5rem;
 	padding: 0 1.5rem;
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	@include transition-no-touch(all $animation-speed ease);
 	white-space: nowrap;
 	@include touch-hover() {
@@ -26,6 +25,16 @@ input[type="button"] {
 		color: $white;
   	  	outline: 0;
 	}
+}
+
+.button.button--large,
+button.button--large,
+input[type="submit"].button--large,
+input[type="reset"].button--large,
+input[type="button"].button--large {
+    font-size: 2rem;
+    height: 4.1rem;
+    line-height: 4.1rem;
 }
 
 .button.button--outline,
@@ -86,6 +95,12 @@ input[type="button"].button--clear.button--secondary {
   	color: $secondary;
   	@include touch-hover() { color: $primary; }
 }
+
+.button.button--cta,
+button.button--cta,
+input[type="submit"].button--cta,
+input[type="reset"].button--cta,
+input[type="button"].button--cta { background-color: $cyber-grape; }
 
 .button--toggle--right { margin-left: -.4rem; }
 

@@ -67,6 +67,30 @@ $text-colour-12: rgba(41,47,54,.12);
 
 $grey: #EBECEC;
 
+/* Gradients */
+.gradient { width: 100%; }
+
+.gradient--primary {
+    background: rgba(46,196,181,1);
+    background: -moz-linear-gradient(top, rgba(46,196,181,1) 0%, rgba(141,222,215,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(46,196,181,1)), color-stop(100%, rgba(141,222,215,1)));
+    background: -webkit-linear-gradient(top, rgba(46,196,181,1) 0%, rgba(141,222,215,1) 100%);
+    background: -o-linear-gradient(top, rgba(46,196,181,1) 0%, rgba(141,222,215,1) 100%);
+    background: -ms-linear-gradient(top, rgba(46,196,181,1) 0%, rgba(141,222,215,1) 100%);
+    background: linear-gradient(to bottom, rgba(46,196,181,1) 0%, rgba(141,222,215,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ec4b5', endColorstr='#8dded7', GradientType=0 );
+}
+
+.gradient--secondary {
+    background: rgba(144,193,231,1);
+    background: -moz-linear-gradient(top, rgba(144,193,231,1) 0%, rgba(194,221,241,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(144,193,231,1)), color-stop(100%, rgba(194,221,241,1)));
+    background: -webkit-linear-gradient(top, rgba(144,193,231,1) 0%, rgba(194,221,241,1) 100%);
+    background: -o-linear-gradient(top, rgba(144,193,231,1) 0%, rgba(194,221,241,1) 100%);
+    background: -ms-linear-gradient(top, rgba(144,193,231,1) 0%, rgba(194,221,241,1) 100%);
+    background: linear-gradient(to bottom, rgba(144,193,231,1) 0%, rgba(194,221,241,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90c1e7', endColorstr='#c2ddf1', GradientType=0 );
+}
 
 
 /* Fonts

@@ -1,0 +1,20 @@
+.banner { position: relative; }
+
+.banner__cta__wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.banner__cta {
+    border: .1rem solid $white;
+    display: inline-block;
+    padding: 1.5rem 2rem 2rem;
+    p {
+        color: $white;
+        font-size: 2.1rem;
+        font-weight: 600;
+        line-height: 1.7;
+    }
+}
