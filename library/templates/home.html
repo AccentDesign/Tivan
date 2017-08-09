@@ -6,25 +6,114 @@
 
 {% block main_content %}
 
-    <p>So, what's it gonna be?</p>
+    {% load staticfiles %}
 
-    <a class="button button--toggle--left toggle--form active" data-target="register">Register</a>
-    <a class="button button--toggle--right toggle--form" data-target="login">Login</a>
-
-    <div id="register" class="form-wrapper active">
-        <form role="form" action="" method="post">
-            {% csrf_token %}
-            {{ reg_form.as_p }}
-            <button type="submit">Register</button>
-        </form>
+    <div class="banner">
+        <img src="{% static '/img/home-banner-aug-17.jpg' %}" class="util--img-responsive" />
+        <div class="banner__cta__wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="banner__cta">
+                            <p>Catalogue your games... Connect with your friends...<br>Browse...Loan...Repeat...</p>
+                            <button id="register_link" class="button--cta">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="login" class="form-wrapper">
-        <form role="form" action="" method="post">
-            {% csrf_token %}
-            {{ auth_form.as_p }}
-            <button type="submit">Login</button>
-        </form>
+    <div class="home--intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                    <img src="{% static '/img/d-pad.png' %}" width="50" height="50" />
+                    <p>Tivan is a free-to-use web application that allows you to catalgue the videogames you own and even explore the collections of your gaming friends.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home--works">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                    <h2>How It Works</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <img src="http://via.placeholder.com/750x610" class="util--img-responsive" />
+                    <span>1</span>
+                    <h3>Sign Up</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="http://via.placeholder.com/750x610" class="util--img-responsive" />
+                    <span>2</span>
+                    <h3>Add Your Games</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="http://via.placeholder.com/750x610" class="util--img-responsive" />
+                    <span>3</span>
+                    <h3>Connect With Gamers</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                    <a class="button" href="{% url 'how-it-works' %}">Find Out More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="{% static '/img/break-fw.png' %}" class="util--img-responsive" />
+
+    <div class="home--login">
+        <a name="register"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                    <h2>So, what's it gonna be?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <a class="button button--toggle--left toggle--form active" data-target="register">Register</a>
+                </div>
+                <div class="col-6">
+                    <a class="button button--toggle--right toggle--form" data-target="login">Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="gradient gradient--green">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 offset-md-1 col-md-5 offset-lg-2 col-lg-4">
+                    </div>
+                    <div class="col-12 offset-md-1 col-md-5 offset-lg-2 col-lg-4">
+                        <div id="register" class="form-wrapper active">
+                            <form role="form" action="" method="post">
+                                {% csrf_token %}
+                                {{ reg_form.as_p }}
+                                <button type="submit">Register</button>
+                            </form>
+                        </div>
+
+                        <div id="login" class="form-wrapper">
+                            <form role="form" action="" method="post">
+                                {% csrf_token %}
+                                {{ auth_form.as_p }}
+                                <button type="submit">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 {% endblock main_content %}
