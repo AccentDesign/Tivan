@@ -6,12 +6,18 @@
 
 {% block main_content %}
 
-    <p>If you want to drop us, the makers of <span class="pixelate">Tivan</span>, a line just to say &quot;Hi!&quot;, give us advice or simply troll us, then please fill out the form below...</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                <p>If you want to drop us, the makers of <span class="pixelate">Tivan</span>, a line just to say &quot;Hi!&quot;, give us advice or simply troll us, then please fill out the form below...</p>
 
-    <form role="form" action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Send</button>
-    </form>
+                <form role="form" action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
 {% endblock main_content %}

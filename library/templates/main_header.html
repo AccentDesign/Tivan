@@ -9,7 +9,7 @@
             <div class="col-12 col-lg-8">
                 <div class="header__nav">
                     <a href="{% url 'home' %}"{% if request.get_full_path == '/' %}class="current"{% endif %}>Home</a>
-                    <a href="{% url 'how-it-works' %}"{% if request.get_full_path == '/how-it-works/' %}class="current"{% endif %}>How It Works</a>
+                    <a href="{% url 'how_it_works' %}"{% if request.get_full_path == '/how-it-works/' %}class="current"{% endif %}>How It Works</a>
                     <a href="{% url 'contact' %}"{% if request.get_full_path == '/contact/' %}class="current"{% endif %}>Contact</a>
                     <a href="/login/" class="button">Login</a>
                 </div>

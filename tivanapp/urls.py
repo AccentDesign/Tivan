@@ -13,8 +13,6 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf import settings
-from django.views.static import serve
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth.views import (
@@ -23,6 +21,7 @@ from django.contrib.auth.views import (
     password_reset_confirm,
     password_reset_complete,
 )
+from django.views.generic import TemplateView
 from . import views
 from library.backends import MyRegistrationView
 
@@ -30,7 +29,7 @@ from library.backends import MyRegistrationView
 urlpatterns = [
     url(r'^', include('registration.backends.simple.urls')),
     url(r'^$', views.home, name="home"),
-    url(r'^how-it-works/$', views.how_it_works, name="how-it-works"),
+    url(r'^how-it-works/$', TemplateView.as_view(template_name='how-it-works.html'), name="how_it_works"),
     url(r'^contact/$', views.contact, name="contact"),
     url(r'^library/', include('library.urls', namespace="library")),
     url(r'^register/$', MyRegistrationView.as_view(), name="registration_register"),
@@ -40,8 +39,3 @@ urlpatterns = [
     url(r'^accounts/password/done/$', password_reset_complete, {'template_name': 'registration/password_reset_complete.html'}, name="password_reset_complete"),
     url(r'^admin/', admin.site.urls, name="admin"),
 ]
-
-if settings.DEBUG:
-    urlpatterns += [
-        url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
-    ]

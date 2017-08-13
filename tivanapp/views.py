@@ -45,6 +45,3 @@ def contact(request):
 
     return render(request, 'contact.html', {'form': form_class})
 
-
-def how_it_works(request):
-    return render(request, 'how-it-works.html')
