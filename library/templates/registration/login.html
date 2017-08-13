@@ -1,4 +1,4 @@
-{% extends 'registration/registration_base.html' %}
+{% extends 'main_base.html' %}
 
 {% block title %}
     Login - {{ block.super }}
@@ -6,14 +6,20 @@
 
 {% block main_content %}
 
-    <h1>Login</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                <h1>Login</h1>
 
-    <form role="form" action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Login" />
-    </form>
+                <form role="form" action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Login" />
+                </form>
 
-    <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
+                <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
+            </div>
+        </div>
+    </div>
 
 {% endblock main_content %}

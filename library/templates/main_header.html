@@ -1,4 +1,4 @@
-<header class="header header--main">
+<header id="header" class="header header--main">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-4">
@@ -11,7 +11,7 @@
                     <a href="{% url 'home' %}"{% if request.get_full_path == '/' %}class="current"{% endif %}>Home</a>
                     <a href="{% url 'how_it_works' %}"{% if request.get_full_path == '/how-it-works/' %}class="current"{% endif %}>How It Works</a>
                     <a href="{% url 'contact' %}"{% if request.get_full_path == '/contact/' %}class="current"{% endif %}>Contact</a>
-                    <a href="/login/" class="button">Login</a>
+                    <a href="{% url 'auth_login' %}" class="button">Login</a>
                 </div>
             </div>
         </div>

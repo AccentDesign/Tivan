@@ -1,12 +1,18 @@
-{% extends 'registration/registration_base.html' %}
+{% extends 'main_base.html' %}
 
 {% block title %}
-    Logout - {{ block.super }}
+    Logged Out - {{ block.super }}
 {% endblock title %}
 
 {% block main_content %}
 
-    <h1>Logged Out</h1>
-    <p>You have been logged out!</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                <h1>Logged Out</h1>
+                <p>You have been logged out!</p>
+            </div>
+        </div>
+    </div>
 
 {% endblock main_content %}
