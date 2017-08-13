@@ -54,7 +54,7 @@ select:focus {
 label,
 legend {
   	display: block;
-  	font-size: 1.4rem;
+  	font-size: 1.6rem;
   	font-weight: 700;
   	margin-bottom: .5rem;
 }
@@ -79,4 +79,23 @@ label > .label-body {
     font-size: 1.4rem;
     font-style: italic;
     margin-top: .5rem
+}
+
+.form--white {
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="text"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    textarea,
+    select {
+        background-color: transparent;
+        border: .1rem solid $white;
+        color: $white;
+    }
+    label,
+    legend,
+    .helptext { color: $white; }
 }

@@ -1222,18 +1222,19 @@ body {
 /*==== 2 - Quarks: defining the basic abstract HTML elements (http://zqsmm.qiniucdn.com/data/20110511083224/index.html) ====*/
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #2EC4B6;
+  color: rgba(41, 47, 54, 0.54);
   font-family: "November", serif;
-  margin: 0 0 3rem; }
+  margin: 0 0 3rem;
+  text-transform: lowercase; }
 
 h1, .h1 {
   font-size: 5.0rem; }
 
 h2, .h2 {
-  font-size: 3.2rem; }
+  font-size: 4.0rem; }
 
 h3, .h3 {
-  font-size: 2.8rem; }
+  font-size: 3.2rem; }
 
 h4, .h4 {
   font-size: 2.1rem; }
@@ -1406,7 +1407,7 @@ select:focus {
 label,
 legend {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: .5rem; }
 
@@ -1429,6 +1430,24 @@ label > .label-body {
   font-size: 1.4rem;
   font-style: italic;
   margin-top: .5rem; }
+
+.form--white input[type="email"],
+.form--white input[type="number"],
+.form--white input[type="search"],
+.form--white input[type="text"],
+.form--white input[type="tel"],
+.form--white input[type="url"],
+.form--white input[type="password"],
+.form--white textarea,
+.form--white select {
+  background-color: transparent;
+  border: 0.1rem solid #fff;
+  color: #fff; }
+
+.form--white label,
+.form--white legend,
+.form--white .helptext {
+  color: #fff; }
 
 th,
 td {
@@ -1783,22 +1802,42 @@ input[type="button"].button--clear.button--secondary {
   input[type="button"].button--clear.button--secondary:active {
     color: #2EC4B6; }
 
-.button.button--cta,
-button.button--cta,
-input[type="submit"].button--cta,
-input[type="reset"].button--cta,
-input[type="button"].button--cta {
+.button.button--special,
+button.button--special,
+input[type="submit"].button--special,
+input[type="reset"].button--special,
+input[type="button"].button--special {
   background-color: #694873; }
-
-.button--toggle--right {
-  margin-left: -.4rem; }
 
 .toggle--form {
   background-color: #fff;
-  color: #2EC4B6; }
+  border-bottom: 0;
+  font-size: 3.2rem;
+  height: 6.9rem;
+  line-height: 6.9rem;
+  padding: 0 2rem; }
   .toggle--form.active {
-    background-color: #2EC4B6;
     color: #fff; }
+
+.button--toggle--left {
+  color: #2EC4B6;
+  float: right; }
+  .button--toggle--left.active {
+    background-color: #2EC4B6; }
+
+.button--toggle--right {
+  border-color: #90C2E7;
+  color: #90C2E7; }
+  .button--toggle--right.active {
+    background-color: #90C2E7; }
+
+.tag {
+  background-color: #2EC4B6;
+  color: #fff;
+  font-family: "November", serif;
+  font-size: 2rem;
+  padding: 1rem 1.2rem .8rem;
+  text-align: center; }
 
 /*==== 4 - Molecules: atoms combined to form micro components ====*/
 .admin-bar {
@@ -2008,9 +2047,11 @@ li.error {
   text-align: center; }
   .footer .row {
     border-top: 0.1rem solid #2EC4B6; }
-  .footer img {
+  .footer svg {
     display: inline-block;
-    margin: 3rem 2rem -1rem; }
+    height: 3rem;
+    margin: 3rem 2rem -1rem;
+    width: 3rem; }
   .footer p {
     color: rgba(41, 47, 54, 0.54);
     font-size: 1.4rem;
@@ -2019,11 +2060,65 @@ li.error {
     color: rgba(41, 47, 54, 0.54); }
 
 /*==== 6 - Templates: organisms combined to form pages ====*/
+.home--intro {
+  padding: 5rem 0 8rem; }
+  .home--intro svg {
+    display: block;
+    height: 5rem;
+    margin: 0 auto 4rem;
+    width: 5rem; }
+
+.home--works h2 {
+  margin-bottom: 5rem; }
+
+.home--works img {
+  margin-bottom: 3rem;
+  padding: 0 1.5rem; }
+
+.home--works .tag {
+  display: block;
+  margin: 0 auto 2rem;
+  width: 4rem; }
+
+.home--works h3 {
+  color: #292f36;
+  font-family: "Athiti", sans-serif;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  padding: 0 1.5rem;
+  text-transform: capitalize; }
+
+.home--works p {
+  padding: 0 1.5rem; }
+
+.home--works .button {
+  display: block;
+  margin: 4rem auto 10rem;
+  width: 17.5rem; }
+
+.home--login {
+  padding: 10rem 0 8rem; }
+  .home--login h2 {
+    margin-bottom: 6rem; }
+  .home--login .gradient {
+    height: 57rem;
+    padding: 5rem 0; }
+
 .form-wrapper {
   display: none;
   margin-top: 2rem; }
   .form-wrapper.active {
     display: block; }
+
+.text-wrapper {
+  display: none;
+  margin-top: 10rem; }
+  .text-wrapper.active {
+    display: block; }
+  .text-wrapper p {
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1.5; }
 
 .library {
   /* Grid Settings */

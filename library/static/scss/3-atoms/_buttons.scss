@@ -96,19 +96,30 @@ input[type="button"].button--clear.button--secondary {
   	@include touch-hover() { color: $primary; }
 }
 
-.button.button--cta,
-button.button--cta,
-input[type="submit"].button--cta,
-input[type="reset"].button--cta,
-input[type="button"].button--cta { background-color: $cyber-grape; }
-
-.button--toggle--right { margin-left: -.4rem; }
+.button.button--special,
+button.button--special,
+input[type="submit"].button--special,
+input[type="reset"].button--special,
+input[type="button"].button--special { background-color: $cyber-grape; }
 
 .toggle--form {
     background-color: $white;
+    border-bottom: 0;
+    font-size: 3.2rem;
+    height: 6.9rem;
+    line-height: 6.9rem;
+    padding: 0 2rem;
+    &.active { color: $white; }
+}
+
+.button--toggle--left {
     color: $primary;
-    &.active {
-        background-color: $primary;
-        color: $white;
-    }
+    float: right;
+    &.active { background-color: $primary; }
+}
+
+.button--toggle--right {
+    border-color: $secondary;
+    color: $secondary;
+    &.active { background-color: $secondary; }
 }

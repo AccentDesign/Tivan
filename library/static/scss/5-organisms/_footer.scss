@@ -2,9 +2,11 @@
     padding: 4rem 0 6rem;
     text-align: center;
     .row { border-top: .1rem solid $primary; }
-    img {
+    svg {
         display: inline-block;
+        height: 3rem;
         margin: 3rem 2rem -1rem;
+        width: 3rem;
     }
     p {
         color: $text-colour-54;
