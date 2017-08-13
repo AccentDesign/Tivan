@@ -139,7 +139,7 @@ EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 
 
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'library'
 
 
 # the email address that the "server emails" will come from

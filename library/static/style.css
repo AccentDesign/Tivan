@@ -1847,7 +1847,7 @@ input[type="button"].button--special {
   display: inline;
   left: 4rem;
   padding: 1rem 1.5rem;
-  position: absolute;
+  position: fixed;
   top: -.1rem;
   z-index: 10; }
   .admin-bar a {

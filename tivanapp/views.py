@@ -45,3 +45,10 @@ def contact(request):
 
     return render(request, 'contact.html', {'form': form_class})
 
+
+def welcome(request):
+    return render(request, 'welcome.html')
+
+
+def connection(request):
+    return render(request, 'connection.html')
