@@ -28,8 +28,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
-                    <img class="align--center--block" src="{% static '/img/d-pad.png' %}" width="50" height="50" />
-                    <p class="align--center">Tivan is a free-to-use web application that allows you to catalgue the videogames you own and even explore the collections of your gaming friends.</p>
+                    {% include 'svg/d_pad.svg' %}
+                    <p class="align--center"><strong>Tivan</strong> is a free-to-use web application that allows you to catalgue the videogames you own and even explore the collections of your gaming friends.</p>
                 </div>
             </div>
         </div>
@@ -102,7 +102,6 @@
                                 <button type="submit">Register</button>
                             </form>
                         </div>
-
                         <div id="login" class="form-wrapper">
                             <form role="form" action="" method="post">
                                 {% csrf_token %}
