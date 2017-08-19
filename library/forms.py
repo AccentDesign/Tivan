@@ -9,7 +9,7 @@ from .models import MediaItem
 class MediaItemForm(ModelForm):
     class Meta:
         model = MediaItem
-        fields = ('title', 'platform', 'coverArt', 'available', 'user',)
+        fields = ('title', 'platform', 'available', 'user',)
 
 
 class EditUserForm(ModelForm):

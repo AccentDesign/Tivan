@@ -20,9 +20,9 @@ class Platform(models.Model):
 
 
 class MediaItem(models.Model):
+    api_id = models.PositiveSmallIntegerField(default=1, blank=True, null=True)
     title = models.CharField(max_length=100)
     platform = models.ForeignKey(Platform, on_delete=models.CASCADE, default='')
-    coverArt = models.ImageField(upload_to=get_image_path, default='')
     available = models.BooleanField(default=1)
     slug = models.SlugField(unique=True, default='')
     user = models.ForeignKey(User, on_delete=models.CASCADE, default='')

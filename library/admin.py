@@ -5,13 +5,13 @@ from .models import Platform, MediaItem
 # set up automated slug creation
 class PlatformAdmin(admin.ModelAdmin):
     model = Platform
-    list_display = ('name',)
+    list_display = ('name', 'icon')
     prepopulated_fields = {'slug': ('name',)}
 
 
 class MediaItemAdmin(admin.ModelAdmin):
     model = MediaItem
-    list_display = ('title', 'platform', 'coverArt', 'available', 'user')
+    list_display = ('title', 'platform', 'available', 'user')
     prepopulated_fields = {'slug': ('title', 'platform', 'user')}
 
 
