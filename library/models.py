@@ -6,16 +6,17 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 
+def get_image_path(instance, filename):
+    return '/'.join(['images', instance.slug, filename])
+
+
 class Platform(models.Model):
     name = models.CharField(max_length=50)
+    icon = models.ImageField(upload_to=get_image_path, default='')
     slug = models.SlugField(unique=True, default='')
 
     def __str__(self):
         return self.name
-
-
-def get_image_path(instance, filename):
-    return '/'.join(['cover-art', instance.slug, filename])
 
 
 class MediaItem(models.Model):
