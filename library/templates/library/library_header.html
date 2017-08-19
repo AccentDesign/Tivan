@@ -4,10 +4,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2">
-                <a href="/"><img src="{% static 'img/tivan-logo.png' %}" alt="Tivan" class="header__logo util--img-responsive" /></a>
+                <a href="{% url 'home' %}">{% include 'svg/tivan.svg' %}</a>
             </div>
             <div class="offset-lg-6 col-lg-1">
-                <a class="button">View Your Collection</a>
+                {% if user.is_authenticated %}
+                    <a class="button">View Your Collection</a>
+                {% endif %}
             </div>
             <div class="offset-lg-1 col-lg-2">
                 {% if user.is_authenticated %}
