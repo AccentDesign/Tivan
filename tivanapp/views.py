@@ -7,6 +7,7 @@ from django.template import Context
 from registration.forms import RegistrationForm
 from .forms import ContactForm
 
+
 # Create your views here.
 
 
