@@ -11,7 +11,7 @@ class PlatformAdmin(admin.ModelAdmin):
 
 class MediaItemAdmin(admin.ModelAdmin):
     model = MediaItem
-    list_display = ('title', 'platform', 'available', 'user')
+    list_display = ('api_id', 'title', 'platform', 'available', 'cover_art_url', 'user')
     prepopulated_fields = {'slug': ('title', 'platform', 'user')}
 
 
