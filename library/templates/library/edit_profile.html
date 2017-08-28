@@ -1,10 +1,10 @@
-{% extends 'library/library_base.html' %}
+{% extends 'library/app_base.html' %}
 
 {% block title %}
     Edit {{ user.username }} Profile - {{ block.super }}
 {% endblock title %}
 
-{% block library_content %}
+{% block app_content %}
 
     <h1>Edit {{ user.username }} Profile</h1>
 
@@ -14,4 +14,4 @@
         <button type="submit">Save</button>
     </form>
 
-{% endblock library_content %}
+{% endblock app_content %}

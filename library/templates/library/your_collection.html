@@ -1,19 +1,12 @@
-{% extends 'library/library_base.html' %}
+{% extends 'library/app_base.html' %}
 
 {% block title %}
-    Library - {{ block.super }}
+    Your Collection - {{ block.super }}
 {% endblock title %}
 
 {% block library_content %}
 
     <div class="container-fluid">
-
-        <div class="search--title">
-            <span>Search by Title</span>
-            {% for letter in 'abcdefghijklmnopqrstuvwxyz' %}
-                <a href="{% url 'library:index_by_letter' initial=letter %}" {% if initial == letter %}class="active"{% endif %}>{{ letter|upper }}</a>
-            {% endfor %}
-        </div>
 
         {% if items %}
             <div class="cards">
@@ -21,8 +14,8 @@
                     {% for i in items %}
                         <div class="col-lg-3">
                             <div class="card">
-                                {% if i.coverArt %}
-                                    <img src="{{ i.coverArt.url }}" class="util--img-responsive" alt="{{ i.title }}" />
+                                {% if i.cover_art_url %}
+                                    <img src="{{ i.cover_art_url }}" class="util--img-responsive" alt="{{ i.title }}" />
                                 {% else %}
                                     <img src="http://via.placeholder.com/250x350" class="util--img-responsive" alt="{{ i.title }}" />
                                 {% endif %}

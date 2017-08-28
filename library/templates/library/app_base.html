@@ -2,18 +2,16 @@
 
 {% block body %}
 
-    {% include 'library/library_header.html' %}
+    {% include 'library/app_header.html' %}
 
     <div class="grid library">
 
         {% include 'library/sidebar_left.html' %}
 
         <div class="library__item center">
-            {% block library_content %}
+            {% block app_content %}
             {% endblock %}
         </div>
-
-        {% include 'library/sidebar_right.html' %}
 
     </div>
 
