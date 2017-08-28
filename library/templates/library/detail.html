@@ -9,7 +9,7 @@
     <h1>{{ item.title }}</h1>
 
     {% if user == item.user %}
-        <a class="button" href="{% url 'library:edit' slug=item.slug %}">Edit</a>
+        <a class="button" href="{% url 'edit' slug=item.slug %}">Edit</a>
     {% endif %}
 
 {% endblock app_content %}

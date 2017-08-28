@@ -11,7 +11,7 @@
         <div class="search--title">
             <span>Search by Title</span>
             {% for letter in 'abcdefghijklmnopqrstuvwxyz' %}
-                <a href="{% url 'library:library_by_letter' initial=letter %}" {% if initial == letter %}class="active"{% endif %}>{{ letter|upper }}</a>
+                <a href="{% url 'library_by_letter' initial=letter %}" {% if initial == letter %}class="active"{% endif %}>{{ letter|upper }}</a>
             {% endfor %}
         </div>
 
@@ -27,7 +27,7 @@
                                     <img src="http://via.placeholder.com/250x350" class="util--img-responsive" alt="{{ i.title }}" />
                                 {% endif %}
                                 <div class="card__text">
-                                    <h5><a href="{% url 'library:detail' i.slug %}">{{ i.title }}</a></h5>
+                                    <h5><a href="{% url 'detail' i.slug %}">{{ i.title }}</a></h5>
                                     <p>{{ i.platform }}</p>
                                 </div>
                             </div>
