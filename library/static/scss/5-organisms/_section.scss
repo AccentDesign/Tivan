@@ -1,14 +1,16 @@
 .section {
-    border-bottom: .3rem solid $text-colour-12;
+    border-bottom: .1rem solid $text-colour-12;
     margin-bottom: 4rem;
     padding: 0 1.5rem;
 }
 
 .section__title {
-    background-color: $text-colour-12;
+    border: .1rem solid #2AB3A6;
+    color: $white;
     font-size: 1.8rem;
     margin: 0 -1.5rem 2rem;
     padding: 1rem 1.5rem;
+    .fa { margin-right: 1rem; }
 }
 
 .section--connections {

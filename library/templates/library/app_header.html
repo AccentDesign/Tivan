@@ -3,21 +3,18 @@
 <header class="header header--library">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-2">
-                <a href="{% url 'home' %}">{% include 'svg/tivan.svg' %}</a>
-            </div>
-            <div class="offset-lg-6 col-lg-1">
-                {% if user.is_authenticated %}
-                    <a class="button">View Your Collection</a>
-                {% endif %}
-            </div>
-            <div class="offset-lg-1 col-lg-2">
-                {% if user.is_authenticated %}
-                    <a class="button" href="{% url 'auth_logout' %}">Logout</a>
-                {% else %}
-                    <a class="button" href="{% url 'auth_login' %}">Login</a>
-                    <!---<a class="button" href="{% url 'registration_register' %}">Register</a>--->
-                {% endif %}
+            <div class="col-12">
+                <div class="header--library__wrapper">
+                    <a href="{% url 'home' %}">{% include 'svg/tivan.svg' %}</a>
+                    <div class="header__nav header__nav--library">
+                        <a href="{% url 'library' %}"{% if request.get_full_path == '/library/' %}class="current"{% endif %}>Library</a>
+                        <a href="{% url 'your_collection' %}"{% if request.get_full_path == '/your-collection/' %}class="current"{% endif %}>Your Collection</a>
+                    </div>
+                    <div class="header--library__tools">
+                        <a id="info_toggle" class="button button--large button--outline"><i class="fa fa-info" aria-hidden="true"></i></a>
+                        <a class="button button--large" href="{% url 'auth_logout' %}">Logout</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

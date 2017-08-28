@@ -6,10 +6,12 @@
 
 {% block app_content %}
 
-    <h1>{{ item.title }}</h1>
+    <div class="main__window">
+        <h1>{{ item.title }}</h1>
 
-    {% if user == item.user %}
-        <a class="button" href="{% url 'edit' slug=item.slug %}">Edit</a>
-    {% endif %}
+        {% if user == item.user %}
+            <a class="button" href="{% url 'edit' slug=item.slug %}">Edit</a>
+        {% endif %}
+    </div>
 
 {% endblock app_content %}

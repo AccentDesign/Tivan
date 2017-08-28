@@ -4,14 +4,12 @@
 
     {% include 'library/app_header.html' %}
 
-    <div class="grid library">
+    <div class="main--app">
 
         {% include 'library/sidebar_left.html' %}
 
-        <div class="library__item center">
-            {% block app_content %}
-            {% endblock %}
-        </div>
+        {% block app_content %}
+        {% endblock %}
 
     </div>
 

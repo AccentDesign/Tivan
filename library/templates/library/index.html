@@ -6,44 +6,35 @@
 
 {% block app_content %}
 
-    <div class="container-fluid">
-
+    <div class="main__window main__window--library">
         <div class="search--title">
             <span>Search by Title</span>
             {% for letter in 'abcdefghijklmnopqrstuvwxyz' %}
-                <a href="{% url 'library_by_letter' initial=letter %}" {% if initial == letter %}class="active"{% endif %}>{{ letter|upper }}</a>
+                <a class="button button--outline" href="{% url 'library_by_letter' initial=letter %}" {% if initial == letter %}class="active"{% endif %}>{{ letter|upper }}</a>
             {% endfor %}
         </div>
 
         {% if items %}
             <div class="cards">
-                <div class="row">
-                    {% for i in items %}
-                        <div class="col-lg-3">
-                            <div class="card">
-                                {% if i.cover_art_url %}
-                                    <img src="{{ i.cover_art_url }}" class="util--img-responsive" alt="{{ i.title }}" />
-                                {% else %}
-                                    <img src="http://via.placeholder.com/250x350" class="util--img-responsive" alt="{{ i.title }}" />
-                                {% endif %}
-                                <div class="card__text">
-                                    <h5><a href="{% url 'detail' i.slug %}">{{ i.title }}</a></h5>
-                                    <p>{{ i.platform }}</p>
-                                </div>
+                {% for i in items %}
+                    <a href="{% url 'detail' i.slug %}">
+                        <div class="card">
+                            {% if i.cover_art_url %}
+                                <img src="{{ i.cover_art_url }}" class="util--img-responsive" alt="{{ i.title }}" />
+                            {% else %}
+                                <img src="http://via.placeholder.com/250x350" class="util--img-responsive" alt="{{ i.title }}" />
+                            {% endif %}
+                            <div class="card__platform">
+                                <img src="{{ i.platform.icon.url }}" class="util--img-responsive" alt="{{ i.title }}" width="60" height="60" />
                             </div>
                         </div>
-                    {% endfor %}
-                </div>
+                    </a>
+                {% endfor %}
             </div>
         {% else %}
-            <div class="row">
-                <div class="offset-lg-2 col-lg-8">
-                    <p>There are currently no videogames from which for you to choose.</p>
-                    <p>How about making a connection with another user?</p>
-                </div>
-            </div>
+            <p>There are currently no videogames from which for you to choose.</p>
+            <p>How about making a connection with another user?</p>
         {% endif %}
-
     </div>
 
 {% endblock app_content %}

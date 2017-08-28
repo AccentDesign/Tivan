@@ -1,9 +1,21 @@
 .search {}
 
 .search--title {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     span {
         font-weight: 700;
         margin-right: 3rem;
+    }
+    .button {
+        box-sizing: content-box;
+        font-family: $body-font;
+        font-size: 1.6rem;
+        height: 2rem;
+        line-height: 2rem;
+        margin-right: .3rem;
+        padding: 0;
+        width: 2rem;
+        text-align: center;
+        text-transform: uppercase
     }
 }

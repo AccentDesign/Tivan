@@ -5,10 +5,34 @@
 
 .header--library {
     background-color: $white;
-    padding: 1.5rem 0;
-    position: absolute;
+    height: 15rem;
+    position: fixed;
+    top: 0;
     width: 100%;
     z-index: 1;
+}
+
+.header--library__wrapper {
+    border-bottom: .1rem solid $primary;
+    margin: 0 2rem;
+    padding: 4rem 0 0;
+    position: relative;
+    a {
+        display: inline-block;
+        margin-bottom: 2.5rem;
+    }
+    .header__nav {
+        bottom: 0;
+        left: 32rem;
+        position: absolute;
+    }
+}
+
+.header--library__tools {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    #info_toggle { margin-right: 4rem; }
 }
 
 .header__nav {
