@@ -44,10 +44,7 @@ input[type="reset"].button--outline,
 input[type="button"].button--outline {
   	background-color: transparent;
   	color: $primary;
-  	@include touch-hover() {
-		border-color: $secondary;
-  		color: $secondary;
-	}
+  	@include touch-hover() { border-color: $secondary; }
 }
 
 .button.button--clear,

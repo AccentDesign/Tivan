@@ -19,7 +19,7 @@
         font-family: $heading-font;
         font-size: 2rem;
         line-height: 1;
-        margin-right: 3rem;
+        margin-right: 4rem;
         text-transform: lowercase;
         &.current { color: $primary; }
         &:last-child {
@@ -32,6 +32,5 @@
         color: $white;
         height: 4rem;
         line-height: 4rem;
-        width: 9rem;
     }
 }

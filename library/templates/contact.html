@@ -6,16 +6,32 @@
 
 {% block main_content %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
-                <p>If you want to drop us, the makers of <span class="pixelate">Tivan</span>, a line just to say &quot;Hi!&quot;, give us advice or simply troll us, then please fill out the form below...</p>
+    {% load staticfiles %}
 
-                <form role="form" action="" method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">Send</button>
-                </form>
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                    <div class="contact__intro">
+                        <p>If you want to drop us, the makers of <span class="special">Tivan</span>, a line just to say &quot;Hi!&quot;, give us advice or simply troll us, then please fill out the form below...</p>
+                    </div>
+                </div>
+                <div class="col-12 offset-md-1 col-md-5 offset-lg-2 col-lg-4">
+                    <form role="form" action="" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="col-12 col-md-5 col-lg-4">
+                    <div class="contact__cta gradient--debug">
+                        <h4>Let Us Know What You Think</h4>
+                        <p><span class="special">Tivan</span> is a “work in progress” web application. We’re super keen to know what you think of it and to hear your opinions on how you think it could be improved.</p>
+                        <p>We’d really appreciate it if you could take 5 minutes to complete our online questionnaire.</p>
+                        <img src="{% static '/img/survey-monkey.png' %}" />
+                        <a href="https://www.surveymonkey.co.uk/" class="button button--large" target="_blank">Take Survey</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

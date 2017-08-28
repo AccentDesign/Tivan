@@ -1,4 +1,8 @@
-.home--intro {
+.main { margin: 4rem 0 6rem; }
+
+.main--home { margin-top: 0; }
+
+.home__intro {
     padding: 5rem 0 8rem;
     svg {
         display: block;
@@ -8,7 +12,7 @@
     }
 }
 
-.home--works {
+.home__works {
     h2 { margin-bottom: 5rem; }
     img {
         margin-bottom: 3rem;
@@ -30,12 +34,12 @@
     p { padding: 0 1.5rem; }
     .button {
         display: block;
-        margin: 4rem auto 10rem;
+        margin: 4rem auto 0;
         width: 17.5rem;
     }
 }
 
-.home--login {
+.home__login {
     padding: 10rem 0 8rem;
     h2 { margin-bottom: 6rem; }
     .gradient {
@@ -58,5 +62,35 @@
         color: $white;
         font-size: 1.8rem;
         line-height: 1.5;
+    }
+}
+
+.contact__intro { margin-bottom: 4rem; }
+
+.contact__cta {
+    border: .1rem solid #E087B0;
+    padding: 2.5rem 2.5rem 7rem;
+    position: relative;
+    h4 {
+        color: $white;
+        margin-bottom: 1rem;
+    }
+    p { color: $white; }
+    img {
+        bottom: 3.5rem;
+        left: 2.5rem;
+        position: absolute;
+        width: 15rem;
+    }
+    .button {
+        background-color: transparent;
+        border-color: $white;
+        bottom: 2.5rem;
+        color: $white;
+        font-size: 1.8rem;
+        height: 3.8rem;
+        line-height: 3.8rem;
+        position: absolute;
+        right: 2.5rem;
     }
 }

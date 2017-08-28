@@ -2,6 +2,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	color: $text-colour-54;
 	font-family: $heading-font;
+	font-weight: 400;
   	margin: 0 0 3rem;
   	text-transform: lowercase
 }
@@ -23,7 +24,10 @@ small, .small { font-size: 80%; }
 
 mark, .mark { background-color: $secondary; }
 
-.pixelate { font-family: $heading-font; }
+.special {
+    font-family: $special-font;
+    font-size: 2rem;
+}
 
 .align--left { text-align: left; }
 .align--center { text-align: center; }

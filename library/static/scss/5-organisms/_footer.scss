@@ -13,5 +13,9 @@
         font-size: 1.4rem;
         text-transform: lowercase;
     }
-    a { color: $text-colour-54; }
+    a {
+        color: $text-colour-54;
+        font-family: $heading-font;
+        font-weight: 700;
+    }
 }
