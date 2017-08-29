@@ -10,6 +10,7 @@ from django.http import Http404
 from registration.forms import RegistrationForm
 from .forms import ContactForm, MediaItemForm, EditUserForm
 from library.models import MediaItem
+from igdb_api_python.igdb import igdb
 
 
 # Create your views here.
@@ -57,7 +58,9 @@ def contact(request):
 
 
 def welcome(request):
-    return render(request, 'welcome.html')
+    igdb = igdb("44abe2c0cd85cbc3b8d54ebfcf5d5de1")
+    result = igdb.games(1942)
+    return render(request, 'welcome.html',{'result': result} )
 
 
 def connection(request):
