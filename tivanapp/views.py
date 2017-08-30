@@ -116,7 +116,7 @@ def edit(request, slug):
 
 @login_required
 def collection(request):
-    items = MediaItem.objects.order_by('title')
+    items = MediaItem.objects.filter(user=request.user).order_by('title')
     users = User.objects.order_by('username')
 
     form_class = MediaItemForm

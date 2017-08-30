@@ -1,14 +1,11 @@
 .card {
-    display: inline-block;
-    margin-right: 2rem;
     margin-bottom: 2rem;
+    position: relative;
+    width: 19%;
 }
 
-.card__text {
-    padding: 1rem 1.5rem;
-    h5 { margin-bottom: 0; }
-    p {
-        font-size: 1.4rem;
-        margin-bottom: 0;
-    }
+.card__platform {
+    bottom: 0;
+    position: absolute;
+    right: 0;
 }
