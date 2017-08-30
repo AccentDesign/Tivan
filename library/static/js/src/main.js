@@ -58,7 +58,15 @@ $(document).ready(function() {
             gutter: 20
         });
 
+        var msnry2 = new Masonry( '.cards--small', {
+            // options
+            itemSelector: '.card__wrapper--small',
+            columnWidth: '.card__wrapper--small',
+            gutter: 10
+        });
+
         msnry.reloadItems();
+        msnry2.reloadItems();
     }
 
     masonryInit();

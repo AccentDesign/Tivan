@@ -8,34 +8,34 @@
 
     <div class="main__window">
 
-        {% if items %}
-            <div class="cards">
-                <div class="row">
+        <div class="main__window__half main__window__half--left">
+            {% if items %}
+                <div class="cards cards--small">
                     {% for i in items %}
-                        <div class="col-lg-3">
-                            <div class="card">
-                                {% if i.cover_art_url %}
-                                    <img src="{{ i.cover_art_url }}" class="util--img-responsive" alt="{{ i.title }}" />
-                                {% else %}
-                                    <img src="http://via.placeholder.com/250x350" class="util--img-responsive" alt="{{ i.title }}" />
-                                {% endif %}
-                                <div class="card__text">
-                                    <h5><a href="{% url 'detail' i.slug %}">{{ i.title }}</a></h5>
-                                    <p>{{ i.platform }}</p>
+                        <div class="card__wrapper card__wrapper--small">
+                            <a href="{% url 'detail' i.slug %}">
+                                <div class="card">
+                                    {% if i.cover_art_url %}
+                                        <img src="{{ i.cover_art_url }}" class="util--img-responsive" alt="{{ i.title }}" />
+                                    {% else %}
+                                        <img src="http://via.placeholder.com/250x350" class="util--img-responsive" alt="{{ i.title }}" />
+                                    {% endif %}
+                                    <div class="card__platform">
+                                        <img src="{{ i.platform.icon.url }}" class="util--img-responsive" alt="{{ i.title }}" width="60" height="60" />
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     {% endfor %}
                 </div>
-            </div>
-        {% else %}
-            <div class="row">
-                <div class="offset-lg-2 col-lg-8">
-                    <p>There are currently no videogames from which for you to choose.</p>
-                    <p>How about making a connection with another user?</p>
-                </div>
-            </div>
-        {% endif %}
+            {% else %}
+                <p>There are currently no videogames from which for you to choose.</p>
+                <p>How about making a connection with another user?</p>
+            {% endif %}
+        </div>
+
+        <div class="main__window__half main__window__half--right">
+        </div>
 
     </div>
 

@@ -3,6 +3,15 @@
     width: 18%;
 }
 
+.card__wrapper--small {
+    margin-bottom: 1rem;
+    width: 31%;
+    .card__platform {
+        height: 4rem;
+        width: 4rem;
+    }
+}
+
 .card { position: relative; }
 
 .card__platform {
