@@ -48,4 +48,19 @@ $(document).ready(function() {
             'scrollTop': $('.home--login').offset().top
         }, 500);
     });
+
+    // Masonry Initialiser
+    function masonryInit() {
+        var msnry = new Masonry( '.cards', {
+            // options
+            itemSelector: '.card__wrapper',
+            columnWidth: '.card__wrapper',
+            gutter: 20
+        });
+
+        msnry.reloadItems();
+    }
+
+    masonryInit();
+
 });

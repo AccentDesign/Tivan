@@ -17,18 +17,20 @@
         {% if items %}
             <div class="cards">
                 {% for i in items %}
-                    <a href="{% url 'detail' i.slug %}">
-                        <div class="card">
-                            {% if i.cover_art_url %}
-                                <img src="{{ i.cover_art_url }}" class="util--img-responsive" alt="{{ i.title }}" />
-                            {% else %}
-                                <img src="http://via.placeholder.com/250x350" class="util--img-responsive" alt="{{ i.title }}" />
-                            {% endif %}
-                            <div class="card__platform">
-                                <img src="{{ i.platform.icon.url }}" class="util--img-responsive" alt="{{ i.title }}" width="60" height="60" />
+                    <div class="card__wrapper">
+                        <a href="{% url 'detail' i.slug %}">
+                            <div class="card">
+                                {% if i.cover_art_url %}
+                                    <img src="{{ i.cover_art_url }}" class="util--img-responsive" alt="{{ i.title }}" />
+                                {% else %}
+                                    <img src="http://via.placeholder.com/250x350" class="util--img-responsive" alt="{{ i.title }}" />
+                                {% endif %}
+                                <div class="card__platform">
+                                    <img src="{{ i.platform.icon.url }}" class="util--img-responsive" alt="{{ i.title }}" width="60" height="60" />
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 {% endfor %}
             </div>
         {% else %}

@@ -1,8 +1,9 @@
-.card {
+.card__wrapper {
     margin-bottom: 2rem;
-    position: relative;
-    width: 19%;
+    width: 18%;
 }
+
+.card { position: relative; }
 
 .card__platform {
     bottom: 0;
