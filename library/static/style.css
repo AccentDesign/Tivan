@@ -2089,8 +2089,6 @@ li.error {
 .footer {
   padding: 4rem 0 6rem;
   text-align: center; }
-  .footer .row {
-    border-top: 0.1rem solid #2EC4B6; }
   .footer svg {
     display: inline-block;
     height: 3rem;
