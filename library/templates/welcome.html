@@ -11,6 +11,10 @@
                     <h1>Welcome</h1>
                     <p>Don&rsquo;t worry, if you don&rsquo;t currently have your head in a game you can always skip this step...</p>
                     <a href="{% url 'registration_connection' %}" class="button">Skip</a>
+
+                    {% for item in result %}
+                        {{ item }}
+                    {% endfor %}
                 </div>
             </div>
         </div>

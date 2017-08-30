@@ -12,6 +12,7 @@ from .forms import ContactForm, MediaItemForm, EditUserForm
 from library.models import MediaItem
 from igdb_api_python.igdb import igdb
 
+igdb = igdb("44abe2c0cd85cbc3b8d54ebfcf5d5de1")
 
 # Create your views here.
 
@@ -58,9 +59,8 @@ def contact(request):
 
 
 def welcome(request):
-    igdb = igdb("44abe2c0cd85cbc3b8d54ebfcf5d5de1")
-    result = igdb.games(1942)
-    return render(request, 'welcome.html',{'result': result} )
+    result = igdb.games('legend of zelda')
+    return render(request, 'welcome.html',{'result': result})
 
 
 def connection(request):
