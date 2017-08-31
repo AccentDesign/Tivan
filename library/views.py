@@ -62,7 +62,7 @@ def media_item_edit(request, slug):
             form.save()
 
             messages.success(request, 'Item Updated.')
-            return redirect('detail', slug=item.slug)
+            return redirect('media_item_detail', slug=item.slug)
     # otherwise just create the form
     else:
         form = form_class(instance=item)
@@ -73,6 +73,10 @@ def media_item_edit(request, slug):
 @login_required
 def media_item_delete(request, slug):
     item = MediaItem.objects.get(slug=slug)
+    if request.method == 'POST':
+        item.delete()
+        messages.success(request, 'The game has been deleted from your collection.')
+        return redirect('your_collection')
     return render(request, 'library/media_item_delete.html', {'item': item})
 
 
@@ -95,9 +99,9 @@ def collection(request):
             # save the object
             item.save()
 
-            messages.success(request, 'Item Added.')
+            messages.success(request, 'The game has been added to your collection.')
             # redirect to our newly created thing
-            return redirect('your_collection', slug=item.slug)
+            return redirect('your_collection')
     # otherwise just create the form
     else:
         form = form_class()
