@@ -39,13 +39,13 @@ def library(request, initial=None):
 
 
 @login_required
-def detail(request, slug):
+def media_item_detail(request, slug):
     item = MediaItem.objects.get(slug=slug)
-    return render(request, 'library/detail.html', {'item': item})
+    return render(request, 'library/media_item_detail.html', {'item': item})
 
 
 @login_required
-def edit(request, slug):
+def media_item_edit(request, slug):
     item = MediaItem.objects.get(slug=slug)
 
     # make sure the logged in user is the owner of the thing
@@ -67,7 +67,13 @@ def edit(request, slug):
     else:
         form = form_class(instance=item)
         # and render the template
-        return render(request, 'library/edit.html', {'item': item, 'form': form})
+        return render(request, 'library/media_item_edit.html', {'item': item, 'form': form})
+
+
+@login_required
+def media_item_delete(request, slug):
+    item = MediaItem.objects.get(slug=slug)
+    return render(request, 'library/media_item_delete.html', {'item': item})
 
 
 @login_required
@@ -104,7 +110,7 @@ def collection(request):
 
 
 @login_required
-def edit_profile(request):
+def profile_edit(request):
     user = request.user
     form_class = EditUserForm
     if request.method == 'POST':
@@ -115,4 +121,4 @@ def edit_profile(request):
             return redirect('index')
     else:
         form = form_class(instance=user)
-        return render(request, 'library/edit_profile.html', {'user': user, 'form': form})
+        return render(request, 'library/profile_edit.html', {'user': user, 'form': form})

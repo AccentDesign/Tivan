@@ -1,0 +1,13 @@
+{% extends 'library/app_base.html' %}
+
+{% block title %}
+    Delete {{ item.title }} - {{ block.super }}
+{% endblock title %}
+
+{% block app_content %}
+
+    <div class="main__window">
+        <h1>Delete {{ item.title }}</h1>
+    </div>
+
+{% endblock app_content %}

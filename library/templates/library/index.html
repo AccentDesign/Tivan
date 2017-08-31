@@ -18,7 +18,7 @@
             <div class="cards">
                 {% for i in items %}
                     <div class="card__wrapper">
-                        <a href="{% url 'detail' i.slug %}">
+                        <a href="{% url 'media_item_detail' i.slug %}">
                             <div class="card">
                                 {% if i.cover_art_url %}
                                     <img src="{{ i.cover_art_url }}" class="util--img-responsive" alt="{{ i.title }}" />
