@@ -1904,6 +1904,8 @@ input[type="button"].button--special {
 .card__wrapper {
   margin-bottom: 2rem;
   width: 18%; }
+  .card__wrapper img {
+    width: 100%; }
 
 .card__wrapper--small {
   margin-bottom: 1rem;
@@ -1917,8 +1919,10 @@ input[type="button"].button--special {
 
 .card__platform {
   bottom: 0;
+  height: 6rem;
   position: absolute;
-  right: 0; }
+  right: 0;
+  width: 6rem; }
 
 /*==== 5 - Organisms: atoms & molecules combined to form complete components/modules ====*/
 .header--main {

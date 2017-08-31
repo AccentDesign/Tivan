@@ -1,6 +1,7 @@
 .card__wrapper {
     margin-bottom: 2rem;
     width: 18%;
+    img { width: 100%; }
 }
 
 .card__wrapper--small {
@@ -16,6 +17,8 @@
 
 .card__platform {
     bottom: 0;
+    height: 6rem;
     position: absolute;
     right: 0;
+    width: 6rem;
 }
