@@ -17,7 +17,11 @@
                         <div class="col-12">
                             <div class="banner__cta gradient--primary">
                                 <p>Catalogue your games... Connect with your friends...<br>Browse...Loan...Repeat...</p>
-                                <a href="{% url 'registration_register' %}" class="button button--large button--special">Register</a>
+                                {% if user.is_authenticated %}
+                                    <a href="{% url 'library' %}" class="button button--large button--outline">View Library</a>
+                                {% else %}
+                                    <a href="{% url 'registration_register' %}" class="button button--large button--special">Register</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

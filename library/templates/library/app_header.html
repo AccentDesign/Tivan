@@ -7,8 +7,8 @@
                 <div class="header--library__wrapper">
                     <a href="{% url 'home' %}">{% include 'svg/tivan.svg' %}</a>
                     <div class="header__nav header__nav--library">
-                        <a href="{% url 'library' %}"{% if request.get_full_path == '/library/' %}class="current"{% endif %}>Library</a>
-                        <a href="{% url 'your_collection' %}"{% if request.get_full_path == '/your-collection/' %}class="current"{% endif %}>Your Collection</a>
+                        <a href="{% url 'library' %}"{% if request.get_full_path == '/app/library/' %}class="current"{% endif %}>Library</a>
+                        <a href="{% url 'your_collection' %}"{% if request.get_full_path == '/app/your-collection/' %}class="current"{% endif %}>Your Collection</a>
                     </div>
                     <div class="header--library__tools">
                         <a id="info_toggle" class="button button--large button--outline"><i class="fa fa-info" aria-hidden="true"></i></a>
