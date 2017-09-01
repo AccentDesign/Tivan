@@ -32,7 +32,7 @@ def library(request, initial=None):
         items = MediaItem.objects.order_by('title')
 
     users = User.objects.exclude(username=request.user.username).order_by('username')
-    return render(request, 'library/index.html', {
+    return render(request, 'library/library.html', {
         'items': items,
         'initial': initial,
         'users': users,

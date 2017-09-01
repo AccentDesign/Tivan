@@ -1917,6 +1917,9 @@ input[type="button"].button--special {
 .card {
   position: relative; }
 
+.card--unavailable {
+  opacity: .2; }
+
 .card__platform {
   bottom: 0;
   height: 6rem;

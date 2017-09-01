@@ -18,8 +18,8 @@
             <div class="cards">
                 {% for i in items %}
                     <div class="card__wrapper">
-                        <a href="{% url 'media_item_detail' i.slug %}">
-                            <div class="card">
+                        {% if i.available %}<a href="{% url 'media_item_detail' i.slug %}">{% endif %}
+                            <div class="card{% if not i.available %} card--unavailable{% endif %}">
                                 {% if i.cover_art_url %}
                                     <img src="{{ i.cover_art_url }}" class="util--img-responsive" alt="{{ i.title }}" />
                                 {% else %}
@@ -29,7 +29,7 @@
                                     <img src="{{ i.platform.icon.url }}" class="util--img-responsive" alt="{{ i.title }}" width="60" height="60" />
                                 </div>
                             </div>
-                        </a>
+                        {% if i.available %}</a>{% endif %}
                     </div>
                 {% endfor %}
             </div>
