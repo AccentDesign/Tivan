@@ -10,7 +10,8 @@
         <h1>{{ item.title }}</h1>
 
         {% if user == item.user %}
-            <a class="button" href="{% url 'edit' slug=item.slug %}">Edit</a>
+            <a class="button" href="{{ request.get_full_path }}edit/">Edit</a>
+            <a class="button" href="{{ request.get_full_path }}delete/">Delete</a>
         {% endif %}
     </div>
 

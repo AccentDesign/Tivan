@@ -8,6 +8,12 @@
 
     <div class="main__window">
         <h1>Delete {{ item.title }}</h1>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Are you sure you want to delete <strong>{{ item.title }}</strong> from your collection?</p>
+            <input type="submit" value="Confirm" />
+        </form>
     </div>
 
 {% endblock app_content %}
