@@ -29,12 +29,18 @@
                     {% endfor %}
                 </div>
             {% else %}
-                <p>There are currently no videogames from which for you to choose.</p>
-                <p>How about making a connection with another user?</p>
+                <p>There are currently no videogames in your collection.</p>
+                <p>How about adding one using the form right there?</p>
             {% endif %}
         </div>
 
         <div class="main__window__half main__window__half--right">
+            <h2>Add a Title to Your Collection</h2>
+            <form role="form" action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Add Title</button>
+            </form>
         </div>
 
     </div>
