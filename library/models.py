@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -19,6 +20,9 @@ class Platform(models.Model):
     def __str__(self):
         return self.name
 
+    def __unicode__(self):
+        return self.name
+
 
 class MediaItem(models.Model):
     api_id = models.PositiveSmallIntegerField(default=1, blank=True, null=True)
@@ -37,24 +41,33 @@ class MediaItem(models.Model):
     def __str__(self):
         return self.title
 
+    def __unicode__(self):
+        return self.title
+
 
 class Connection(models.Model):
+    id = models.AutoField(primary_key=True)
     users = models.ManyToManyField(User, blank=True)
     active = models.BooleanField(default=0)
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL)
     connections = models.ManyToManyField(Connection, blank=True)
 
+    def __str__(self):
+        return self.user.username
 
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
+    def __unicode__(self):
+        return self.user.username
+
+
+def post_save_user_model_receiver(sender, instance, created, *args, **kwargs):
     if created:
-        Profile.objects.create(user=instance)
+        try:
+            Profile.objects.create(user=instance)
+        except:
+            pass
 
-
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+post_save.connect(post_save_user_model_receiver, sender=settings.AUTH_USER_MODEL)
 
