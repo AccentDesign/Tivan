@@ -20,7 +20,8 @@ def welcome(request):
 
 @login_required
 def connection(request):
-    return render(request, 'connection.html')
+    users = User.objects.exclude(username=request.user.username).order_by('username')
+    return render(request, 'connection.html', {'users': users})
 
 
 @login_required
@@ -41,12 +42,17 @@ def library(request, initial=None):
 @login_required
 def media_item_detail(request, slug):
     item = MediaItem.objects.get(slug=slug)
-    return render(request, 'library/media_item_detail.html', {'item': item})
+    users = User.objects.exclude(username=request.user.username).order_by('username')
+    return render(request, 'library/media_item_detail.html', {
+        'item': item,
+        'users': users
+    })
 
 
 @login_required
 def media_item_edit(request, slug):
     item = MediaItem.objects.get(slug=slug)
+    users = User.objects.exclude(username=request.user.username).order_by('username')
 
     # make sure the logged in user is the owner of the thing
     if item.user != request.user:
@@ -67,17 +73,25 @@ def media_item_edit(request, slug):
     else:
         form = form_class(instance=item)
         # and render the template
-        return render(request, 'library/media_item_edit.html', {'item': item, 'form': form})
+        return render(request, 'library/media_item_edit.html', {
+            'item': item,
+            'users': users,
+            'form': form
+        })
 
 
 @login_required
 def media_item_delete(request, slug):
     item = MediaItem.objects.get(slug=slug)
+    users = User.objects.exclude(username=request.user.username).order_by('username')
     if request.method == 'POST':
         item.delete()
         messages.success(request, 'The game has been deleted from your collection.')
         return redirect('your_collection')
-    return render(request, 'library/media_item_delete.html', {'item': item})
+    return render(request, 'library/media_item_delete.html', {
+        'item': item,
+        'users': users
+    })
 
 
 @login_required
