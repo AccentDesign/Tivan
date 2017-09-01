@@ -30,7 +30,7 @@ def library(request, initial=None):
     else:
         items = MediaItem.objects.order_by('title')
 
-    users = User.objects.order_by('username')
+    users = User.objects.exclude(username=request.user.username).order_by('username')
     return render(request, 'library/index.html', {
         'items': items,
         'initial': initial,
@@ -83,7 +83,7 @@ def media_item_delete(request, slug):
 @login_required
 def collection(request):
     items = MediaItem.objects.filter(user=request.user).order_by('title')
-    users = User.objects.order_by('username')
+    users = User.objects.exclude(username=request.user.username).order_by('username')
 
     form_class = MediaItemForm
     # if we're coming from a submitted form, do this
