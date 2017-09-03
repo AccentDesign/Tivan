@@ -2156,6 +2156,12 @@ li.error {
 .main--home {
   margin-top: 0; }
 
+.main--works #tivan_sprite {
+  margin-top: -11rem; }
+
+.main--works #break_fw {
+  margin: 8rem 0; }
+
 .home__intro {
   padding: 5rem 0 8rem; }
   .home__intro svg {

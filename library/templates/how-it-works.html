@@ -6,11 +6,112 @@
 
 {% block main_content %}
 
-    <div class="main">
+    {% load staticfiles %}
+
+    <div class="main main--works">
         <div class="container">
             <div class="row">
                 <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
                     <h1>How It Works</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-5 offset-lg-1 col-lg-5">
+                    <p><span class="special">Tivan</span> is a free-to-use web application that allows you to catalogue the videogames you own and even explore the collections of your gaming friends.</p>
+                    <p>Have you ever been desperate to play a particular game but simply can't afford it? Maybe you've found that you &amp; your friends have been laying your hard earned on the same games? We might be able to help you out....</p>
+                    <p>Remember, the good ol' days when you &amp; your friends used to loan &amp; share your games with one another? Well, those days don't heave to be gone and <span class="special">Tivan</span> is here to help you!</p>
+                    <p>Using the application simple &amp; intuitive interface you can catalogue your games and connect with other <span class="special">Tivan</span> users you may know.</p>
+                </div>
+                <div class="col-12 col-md-5 offset-lg-1 col-lg-4">
+                    <img id="tivan_sprite" src="{% static '/img/tivan-sprite-large.png' %}" class="util--img-responsive" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-3 col-md-6">
+                    {% include 'svg/break_fw.svg' %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-5 offset-lg-1 col-lg-4">
+                    <img src="{% static '/img/sign-up.png' %}" class="util--img-responsive" />
+                </div>
+                <div class="col-12 col-md-5 offset-lg-1 col-lg-5">
+                    <h2>Sign Up</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    {% if not user.is_authenticated %}
+                    <p><a href="{% url 'registration_register' %}" class="button button--large button--special">Register</a></p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-3 col-md-6">
+                    {% include 'svg/break_fw.svg' %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-5 offset-lg-1 col-lg-5">
+                    <h2>Connect with Gamers</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                </div>
+                <div class="col-12 col-md-5 offset-lg-1 col-lg-4">
+                    <img src="{% static '/img/connect-with-gamers.png' %}" class="util--img-responsive" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-3 col-md-6">
+                    {% include 'svg/break_fw.svg' %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-5 offset-lg-1 col-lg-4">
+                    <img src="{% static '/img/popular-platforms.png' %}" class="util--img-responsive" />
+                </div>
+                <div class="col-12 col-md-5 offset-lg-1 col-lg-5">
+                    <h2>Popular Platforms</h2>
+                    <p><span class="special">Tivan</span>'s cataloguing currently supports the following videogame platforms:</p>
+                    <ul>
+                        <li>Sony PlayStation 4</li>
+                        <li>Xbox One</li>
+                        <li>Nintendo Switch</li>
+                        <li>Sony PlayStation 3</li>
+                        <li>Xbox 360</li>
+                        <li>Nintendo Wii U</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-3 col-md-6">
+                    {% include 'svg/break_fw.svg' %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-5 offset-lg-1 col-lg-5">
+                    <h2>The Library</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                </div>
+                <div class="col-12 col-md-5 offset-lg-1 col-lg-4">
+                    <img src="{% static '/img/the-library.png' %}" class="util--img-responsive" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-3 col-md-6">
+                    {% include 'svg/break_fw.svg' %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-5 offset-lg-1 col-lg-4">
+                    <img src="{% static '/img/your-collection.png' %}" class="util--img-responsive" />
+                </div>
+                <div class="col-12 col-md-5 offset-lg-1 col-lg-5">
+                    <h2>Your Collection</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
                 </div>
             </div>
         </div>
