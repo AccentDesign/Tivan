@@ -1,14 +1,10 @@
 <div class="section section--connections">
     <h3 class="section__title gradient--primary"><i class="fa fa-users" aria-hidden="true"></i>Connections</h3>
-
-     {% if users %}
-        <ul>
+    <ul>
+        {% if users %}
             {% for u in users %}
-                {% if u.username != 'admin' %}
-                    <li>{{ u.username }}</li>
-                {% endif %}
+                <li>{{ u.username }}</li>
             {% endfor %}
-        </ul>
-    {% endif %}
-
+        {% endif %}
+    </ul>
 </div>

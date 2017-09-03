@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from .forms import MediaItemForm, EditUserForm
-from .models import MediaItem
+from .models import MediaItem, Connection
 from igdb_api_python.igdb import igdb
 
 igdb = igdb("44abe2c0cd85cbc3b8d54ebfcf5d5de1")
@@ -20,7 +20,8 @@ def welcome(request):
 
 @login_required
 def connection(request):
-    users = User.objects.exclude(username=request.user.username).order_by('username')
+    excluded = ['admin', request.user.username]
+    users = User.objects.exclude(username__in=excluded).order_by('username')
     return render(request, 'connection.html', {'users': users})
 
 
@@ -31,7 +32,9 @@ def library(request, initial=None):
     else:
         items = MediaItem.objects.order_by('title')
 
-    users = User.objects.exclude(username=request.user.username).order_by('username')
+    excluded = ['admin', request.user.username]
+    users = User.objects.exclude(username__in=excluded).order_by('username')
+
     return render(request, 'library/library.html', {
         'items': items,
         'initial': initial,
@@ -42,7 +45,8 @@ def library(request, initial=None):
 @login_required
 def media_item_detail(request, slug):
     item = MediaItem.objects.get(slug=slug)
-    users = User.objects.exclude(username=request.user.username).order_by('username')
+    excluded = ['admin', request.user.username]
+    users = User.objects.exclude(username__in=excluded).order_by('username')
     return render(request, 'library/media_item_detail.html', {
         'item': item,
         'users': users
@@ -52,7 +56,8 @@ def media_item_detail(request, slug):
 @login_required
 def media_item_edit(request, slug):
     item = MediaItem.objects.get(slug=slug)
-    users = User.objects.exclude(username=request.user.username).order_by('username')
+    excluded = ['admin', request.user.username]
+    users = User.objects.exclude(username__in=excluded).order_by('username')
 
     # make sure the logged in user is the owner of the thing
     if item.user != request.user:
@@ -83,7 +88,8 @@ def media_item_edit(request, slug):
 @login_required
 def media_item_delete(request, slug):
     item = MediaItem.objects.get(slug=slug)
-    users = User.objects.exclude(username=request.user.username).order_by('username')
+    excluded = ['admin', request.user.username]
+    users = User.objects.exclude(username__in=excluded).order_by('username')
     if request.method == 'POST':
         item.delete()
         messages.success(request, 'The game has been deleted from your collection.')
@@ -97,7 +103,8 @@ def media_item_delete(request, slug):
 @login_required
 def collection(request):
     items = MediaItem.objects.filter(user=request.user).order_by('title')
-    users = User.objects.exclude(username=request.user.username).order_by('username')
+    excluded = ['admin', request.user.username]
+    users = User.objects.exclude(username__in=excluded).order_by('username')
 
     form_class = MediaItemForm
     # if we're coming from a submitted form, do this

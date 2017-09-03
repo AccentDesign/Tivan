@@ -50,10 +50,15 @@ class Connection(models.Model):
     users = models.ManyToManyField(User, blank=True)
     active = models.BooleanField(default=0)
 
+    def __str__(self):
+        return str(self.id)
+
+    def __unicode__(self):
+        return str(self.id)
+
 
 class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
-    connections = models.ManyToManyField(Connection, blank=True)
 
     def __str__(self):
         return self.user.username
