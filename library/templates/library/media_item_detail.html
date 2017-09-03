@@ -7,12 +7,21 @@
 {% block app_content %}
 
     <div class="main__window">
-        <h1>{{ item.title }}</h1>
+        <div class="game game--edit">
+            {% if item.cover_art_url %}
+                <img src="{{ item.cover_art_url }}" class="game__cover" alt="{{ item.title }}" />
+            {% endif %}
+            <h1>{{ item.title }}</h1>
 
-        {% if user == item.user %}
-            <a class="button" href="{{ request.get_full_path }}edit/">Edit</a>
-            <a class="button" href="{{ request.get_full_path }}delete/">Delete</a>
-        {% endif %}
+            <label>Platform:</label><img src="{{ item.platform.icon.url }}" alt="{{ item.title }}" width="100" height="100" class="game__platform" />
+            <p class="game__user">This game belongs to <strong>{{ item.user.username }}</strong></p>
+            {% if user == item.user %}
+                <a class="button" href="{{ request.get_full_path }}edit/">Edit</a>
+                <a class="button button--special" href="{{ request.get_full_path }}delete/">Delete</a>
+            {% else %}
+                <a class="button" href="{% url 'library' %}">Back to Library</a>
+            {% endif %}
+        </div>
     </div>
 
 {% endblock app_content %}

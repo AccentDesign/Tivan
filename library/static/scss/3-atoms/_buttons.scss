@@ -97,7 +97,10 @@ input[type="button"].button--clear.button--secondary {
 button.button--special,
 input[type="submit"].button--special,
 input[type="reset"].button--special,
-input[type="button"].button--special { background-color: $cyber-grape; }
+input[type="button"].button--special {
+    background-color: $cyber-grape;
+    border-color: $cyber-grape;
+}
 
 .toggle--form {
     background-color: $white;

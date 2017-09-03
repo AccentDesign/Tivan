@@ -1816,7 +1816,8 @@ button.button--special,
 input[type="submit"].button--special,
 input[type="reset"].button--special,
 input[type="button"].button--special {
-  background-color: #694873; }
+  background-color: #694873;
+  border-color: #694873; }
 
 .toggle--form {
   background-color: #fff;
@@ -2247,6 +2248,11 @@ li.error {
   min-height: calc(100vh - 15rem);
   padding: 7rem 7rem 5rem;
   width: calc(100% - 25rem); }
+  .main__window h1, .main__window .h1, .main__window h2, .main__window .h2, .main__window h3, .main__window .h3, .main__window h4, .main__window .h4, .main__window h5, .main__window .h5, .main__window h6, .main__window .h6 {
+    color: #292f36;
+    font-family: "Athiti", sans-serif;
+    font-weight: 700;
+    text-transform: initial; }
 
 .main__window--library {
   padding-top: 2.5rem; }
@@ -2262,12 +2268,23 @@ li.error {
   float: right;
   padding-left: 7rem; }
   .main__window__half--right h2 {
-    color: #292f36;
-    font-family: "Athiti", sans-serif;
     font-size: 2.4rem;
-    font-weight: 700;
-    margin: 4rem 0 6rem;
-    text-transform: initial; }
+    margin: 4rem 0 6rem; }
+
+.game--edit {
+  position: relative; }
+  .game--edit h1 {
+    margin-bottom: 4rem;
+    padding-right: 40rem; }
+  .game--edit .button--special {
+    margin-left: 2rem; }
+
+.game__cover {
+  position: absolute;
+  right: 0; }
+
+.game__platform, .game__user {
+  margin-bottom: 4rem; }
 
 /*==== 7 - Responsive: mobile device styles ====*/
 /* Site is built 'Desktop First' so all styles up to this point will cover Large Desktop (Extra Large) screen sizes */
