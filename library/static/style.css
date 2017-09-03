@@ -1950,13 +1950,18 @@ input[type="button"].button--special {
     margin-bottom: 2.5rem; }
   .header--library__wrapper .header__nav {
     bottom: 0;
-    left: 32rem;
+    left: 28.5rem;
     position: absolute; }
 
 .header--library__tools {
   bottom: 0;
   position: absolute;
   right: 0; }
+  .header--library__tools span {
+    color: rgba(41, 47, 54, 0.54);
+    font-family: "Athiti", sans-serif;
+    font-size: 2.4rem;
+    margin-right: 6rem; }
   .header--library__tools #info_toggle {
     margin-right: 4rem; }
 
