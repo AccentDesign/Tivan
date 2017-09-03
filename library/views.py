@@ -14,8 +14,28 @@ igdb = igdb("44abe2c0cd85cbc3b8d54ebfcf5d5de1")
 
 @login_required
 def welcome(request):
-    result = igdb.games('legend of zelda')
-    return render(request, 'welcome.html',{'result': result})
+    form_class = MediaItemForm
+    # if we're coming from a submitted form, do this
+    if request.method == 'POST':
+        # grab the data from the submitted form and apply to # the form
+        form = form_class(request.POST)
+        if form.is_valid():
+            # create an instance but do not save yet
+            item = form.save(commit=False)
+            # set the additional details
+            item.user = request.user
+
+            # save the object
+            item.save()
+
+            messages.success(request, 'The game has been added to your collection.')
+            # redirect to our newly created thing
+            return redirect('library')
+    # otherwise just create the form
+    else:
+        form = form_class()
+
+    return render(request, 'welcome.html',{'form': form})
 
 
 @login_required

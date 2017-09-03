@@ -55,6 +55,10 @@ ul, ol, dl {
 	line-height: 1.6;
 	margin: 0 0 2rem;
   	padding-left: 0;
+  	&.errorlist {
+  	    list-style: none;
+  	    li { color: #BA1200; }
+  	}
 }
 ul ul,
 ul ol,

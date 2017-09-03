@@ -1306,6 +1306,10 @@ ul, ol, dl {
   line-height: 1.6;
   margin: 0 0 2rem;
   padding-left: 0; }
+  ul.errorlist, ol.errorlist, dl.errorlist {
+    list-style: none; }
+    ul.errorlist li, ol.errorlist li, dl.errorlist li {
+      color: #BA1200; }
 
 ul ul,
 ul ol,
