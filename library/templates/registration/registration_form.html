@@ -11,7 +11,15 @@
             <div class="row">
                 <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
                     <h1>Register</h1>
-
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-5 offset-lg-2 col-lg-4">
+                    <p>Signing up to use <span class="special">Tivan</span> is quick, easy, and completely FREE!</p>
+                    <p>Simply fill out the form to register. We will then ask you what game you're currently playing and if you want to connect with another <span class="special">Tivan</span> user right off the bat. These steps will help you get the most out of the application but can be skipped if you prefer.</p>
+                    <p>Your personal details are safe &amp; secure with us and they will NEVER be shared with any 3rd party.</p>
+                </div>
+                <div class="col-12 col-md-5 offset-lg-1 col-lg-4">
                     <form role="form" action="" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}

@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block title %}
+    Welcome - {{ block.super }}
+{% endblock title %}
+
 {% block body %}
 
 {% include 'mini_header.html' %}
@@ -9,13 +13,23 @@
             <div class="row">
                 <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
                     <h1>Welcome</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 offset-md-1 col-md-5 offset-lg-2 col-lg-4">
+                    <p><strong><em>Baa-da-da Da-da-daaahhh!!!</em></strong></p>
+                    <p>That's it, you're registered! Welcome to <span class="special">Tivan</span>!</p>
+                    <p>You will now be able to login using the username &amp; password with which you registered.</p>
+                    <p>To get the most out of using the application please use the form to let us know what game you're currently playing. This will be added to your collection. You can add more titles from the <a href="{% url 'your_collection' %}">your collection</a> section of the application.</p>
+                    <p>Don&rsquo;t worry, if you don&rsquo;t currently have your head in a game you can always skip this step...</p>
+                    <a href="{% url 'library' %}" class="button">Skip</a>
+                </div>
+                <div class="col-12 col-md-5 offset-lg-1 col-lg-4">
                     <form role="form" action="" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <button type="submit">Add Title</button>
                     </form>
-                    <p>Don&rsquo;t worry, if you don&rsquo;t currently have your head in a game you can always skip this step...</p>
-                    <a href="{% url 'library' %}" class="button">Skip</a>
                 </div>
             </div>
         </div>
