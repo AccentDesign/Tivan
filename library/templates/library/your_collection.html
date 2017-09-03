@@ -6,6 +6,8 @@
 
 {% block app_content %}
 
+    {% load staticfiles %}
+
     <div class="main__window">
 
         <div class="main__window__half main__window__half--left">
@@ -18,7 +20,8 @@
                                     {% if i.cover_art_url %}
                                         <img src="{{ i.cover_art_url }}" class="util--img-responsive" alt="{{ i.title }}" />
                                     {% else %}
-                                        <img src="http://via.placeholder.com/250x350" class="util--img-responsive" alt="{{ i.title }}" />
+                                        <img src="{% static '/img/250x350.jpg' %}" class="util--img-responsive" alt="{{ i.title }}" />
+                                        <p class="card__title">{{ i.title }}</p>
                                     {% endif %}
                                     <div class="card__platform">
                                         <img src="{{ i.platform.icon.url }}" class="util--img-responsive" alt="{{ i.title }}" width="60" height="60" />

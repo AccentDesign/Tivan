@@ -6,6 +6,8 @@
 
 {% block app_content %}
 
+    {% load staticfiles %}
+
     <div class="main__window main__window--library">
         <div class="search--title">
             <span>Search by Title</span>
@@ -23,7 +25,8 @@
                                 {% if i.cover_art_url %}
                                     <img src="{{ i.cover_art_url }}" class="util--img-responsive" alt="{{ i.title }}" />
                                 {% else %}
-                                    <img src="http://via.placeholder.com/250x350" class="util--img-responsive" alt="{{ i.title }}" />
+                                    <img src="{% static '/img/250x350.jpg' %}" class="util--img-responsive" alt="{{ i.title }}" />
+                                    <p class="card__title">{{ i.title }}</p>
                                 {% endif %}
                                 <div class="card__platform">
                                     <img src="{{ i.platform.icon.url }}" class="util--img-responsive" alt="{{ i.title }}" width="60" height="60" />
@@ -34,8 +37,9 @@
                 {% endfor %}
             </div>
         {% else %}
-            <p>There are currently no videogames from which for you to choose.</p>
-            <p>How about making a connection with another user?</p>
+            <div class="cards--no">
+                <p>There are currently no videogames from which for you to choose.</p>
+            </div>
         {% endif %}
     </div>
 

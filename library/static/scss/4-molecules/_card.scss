@@ -7,15 +7,29 @@
 .card__wrapper--small {
     margin-bottom: 1rem;
     width: 31%;
+    .card__title { font-size: 2.4rem; }
     .card__platform {
-        height: 4rem;
-        width: 4rem;
+        height: 5rem;
+        width: 5rem;
     }
 }
 
 .card { position: relative; }
 
 .card--unavailable { opacity: .2; }
+
+.card__title {
+    color: #969696;
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin-bottom: 0;
+    padding: 0 1.5rem;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
 
 .card__platform {
     bottom: 0;
