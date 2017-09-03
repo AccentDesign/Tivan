@@ -27,14 +27,13 @@ def connection(request):
 
 @login_required
 def library(request, initial=None):
-    if initial:
-        items = MediaItem.objects.filter(title__istartswith=initial).order_by('title')
-    else:
-        items = MediaItem.objects.order_by('title')
-
     excluded = ['admin', request.user.username]
-    users = User.objects.exclude(username__in=excluded).order_by('username')
+    if initial:
+        items = MediaItem.objects.exclude(user__username__in=excluded).filter(title__istartswith=initial).order_by('title')
+    else:
+        items = MediaItem.objects.exclude(user__username__in=excluded).order_by('title')
 
+    users = User.objects.exclude(username__in=excluded).order_by('username')
     return render(request, 'library/library.html', {
         'items': items,
         'initial': initial,
