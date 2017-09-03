@@ -2003,6 +2003,9 @@ input[type="button"].button--special {
     color: #fff;
     height: 4rem;
     line-height: 4rem; }
+  .header__nav .button--outline {
+    color: #2EC4B6;
+    margin-right: 1rem; }
 
 .banner {
   position: relative; }
@@ -2012,6 +2015,9 @@ input[type="button"].button--special {
   top: 50%;
   transform: translateY(-50%);
   width: 100%; }
+  .banner__cta__wrapper .button--outline {
+    border-color: #fff;
+    color: #fff; }
 
 .banner__cta {
   border: 0.1rem solid #fff;

@@ -5,6 +5,10 @@
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
+    .button--outline {
+        border-color: $white;
+        color: $white;
+    }
 }
 
 .banner__cta {
