@@ -37,10 +37,10 @@
                 </div>
                 <div class="col-12 col-md-5 offset-lg-1 col-lg-5">
                     <h2>Sign Up</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    <p>Signing up to use <span class="special">Tivan</span> is quick, easy, and completely FREE!</p>
+                    <p>It's a 3 step process starting with asking you for some standard login details. We will then ask you what game you're currently playing and if you want to connect with another <span class="special">Tivan</span> user right off the bat.</p>
                     {% if not user.is_authenticated %}
-                    <p><a href="{% url 'registration_register' %}" class="button button--large button--special">Register</a></p>
+                        <p><a href="{% url 'registration_register' %}" class="button button--large button--special">Register</a></p>
                     {% endif %}
                 </div>
             </div>
@@ -52,9 +52,8 @@
             <div class="row">
                 <div class="col-12 offset-md-1 col-md-5 offset-lg-1 col-lg-5">
                     <h2>Connect with Gamers</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    <p>The application allows you to form a connection with another user you may know (some may call it 'friending....'.</p>
+                    <p>By linking up with one another you can pool your game collections. Maybe your mate Pete has a game you've been dieing to play and you never knew. But <span class="special">Tivan</span> knows. Maybe give Pete a holla and see if he'll let you borrow it....</p>
                 </div>
                 <div class="col-12 col-md-5 offset-lg-1 col-lg-4">
                     <img src="{% static '/img/connect-with-gamers.png' %}" class="util--img-responsive" />
@@ -90,9 +89,8 @@
             <div class="row">
                 <div class="col-12 offset-md-1 col-md-5 offset-lg-1 col-lg-5">
                     <h2>The Library</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    <p>Here's where a lot of the applications magic happens. Your library is made up of the game collections of all the users to whom you're connected all pooled together. Think of it like a 'virtual' Netflix of games!</p>
+                    <p>The game and the platform your friend owns a copy for are clearly displayed. Just clicked on a title of you choosing, see who owns it and give them a nudge. They may be able to hook you up.</p>
                 </div>
                 <div class="col-12 col-md-5 offset-lg-1 col-lg-4">
                     <img src="{% static '/img/the-library.png' %}" class="util--img-responsive" />
@@ -109,9 +107,8 @@
                 </div>
                 <div class="col-12 col-md-5 offset-lg-1 col-lg-5">
                     <h2>Your Collection</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, nibh at porta mattis, purus quam lacinia dolor.</p>
+                    <p>Sometimes it's handy just to peruse your own collection. Well, <span class="special">Tivan</span> lets you do that too.</p>
+                    <p>Adding a title is simple. Just fill out the games title, select it's platform, tick or untick it's availability to other users, hit the button and BOOM it's there.</p>
                 </div>
             </div>
         </div>
