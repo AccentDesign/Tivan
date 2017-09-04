@@ -2,6 +2,8 @@
 
 {% block body %}
 
+    {% load staticfiles %}
+
     {% include 'library/app_header.html' %}
 
     <div class="main--app">
@@ -11,6 +13,14 @@
         {% block app_content %}
         {% endblock %}
 
+    </div>
+
+    <div class="contact__cta contact__cta--app gradient--debug">
+        <h4>Let Us Know What You Think</h4>
+        <p><span class="special">Tivan</span> is a “work in progress” web application. We’re super keen to know what you think of it and to hear your opinions on how you think it could be improved.</p>
+        <p>We’d really appreciate it if you could take 5 minutes to complete our online questionnaire.</p>
+        <img src="{% static '/img/survey-monkey.png' %}" />
+        <a href="https://www.surveymonkey.co.uk/r/X9NSTZL" class="button button--large" target="_blank">Take Survey</a>
     </div>
 
 {% endblock body %}

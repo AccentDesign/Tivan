@@ -2303,6 +2303,12 @@ li.error {
 .game__platform, .game__user {
   margin-bottom: 4rem; }
 
+.contact__cta--app {
+  bottom: 2rem;
+  left: 2rem;
+  position: fixed;
+  width: 36.5rem; }
+
 /*==== 7 - Responsive: mobile device styles ====*/
 /* Site is built 'Desktop First' so all styles up to this point will cover Large Desktop (Extra Large) screen sizes */
 /* Desktop/Tablet Landscape (Large) screen sizes */
