@@ -2,8 +2,12 @@
 config.codekit
 *.scssc
 *.codekit
-/config.codekit
 library/static/scss/.sass-cache/
-media/*
-node_modules/
-env/
+node_modules
+.idea
+.postgres
+**__pycache__**
+*.pyc
+.coverage
+htmlcov
+.vscode

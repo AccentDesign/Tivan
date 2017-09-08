@@ -1,17 +1,7 @@
-appdirs==1.4.3
-certifi==2017.7.27.1
-chardet==3.0.4
-Django==1.10.7
-django-debug-toolbar==1.8
-django-registration-redux==1.3
-idna==2.6
-igdb-api-python==0.800
-libsass==0.13.2
-olefile==0.44
-packaging==16.8
-Pillow==4.1.1
-pyparsing==2.2.0
-requests==2.18.4
-six==1.10.0
-sqlparse==0.2.3
-urllib3==1.22
+Django
+django-registration-redux
+Pillow
+igdb-api-python
+
+# postgres client
+psycopg2

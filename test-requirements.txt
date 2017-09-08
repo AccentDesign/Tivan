@@ -1,0 +1,4 @@
+# base requirements
+-r requirements.txt
+
+django-debug-toolbar
